@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Service & Stuff 
 import { AuthService } from './services/auth.service';
+import { DashboardService } from './services/dashboard.service';
 
 // Components & Stuff
 import { AppComponent } from './app.component';
@@ -30,7 +31,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpModule,
     FormsModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    DashboardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

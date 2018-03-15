@@ -13,6 +13,7 @@ import { AuthService } from './services/auth.service';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -21,6 +22,7 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     SignupComponent,
     LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

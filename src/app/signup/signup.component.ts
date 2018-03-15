@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
         this.throwError = "";
 
         // Redirect to /something
-        this.myRouter.navigate(['/blahblah']);
+        this.myRouter.navigate(['/']);
       })
       .catch(err => {
         const parsedError = err.json();

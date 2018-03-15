@@ -10,7 +10,7 @@ import { AuthService } from '../services/auth.service';
 })
 
 export class LoginComponent implements OnInit {
-  // isLoggedOut: boolean = false;
+  isLoggedOut: boolean = true;
 
   loginInfo = {
     username: "",
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
         .login(this.loginInfo)
         // If success, we are logged in.
         .then(resultFromApi => {
-          this.myRouter.navigate(["/phones"]);
+          this.myRouter.navigate(["/"]);
         })
 
         // Even if you don't do anything on error, catch to avoid a console error.
@@ -47,14 +47,19 @@ export class LoginComponent implements OnInit {
           // clear the error message
           this.loginErrorMessage = "";
 
-          // redirect to /phones
-          this.myRouter.navigate(['/phones']);
+          // redirect to / ******* CHANGE AFTER
+          this.myRouter.navigate(['/']);
+
+          // For Logout Testing
+          this.isLoggedOut = !this.isLoggedOut;
+          console.log(`Success Homie, isLogged out is ${this.isLoggedOut}`);
+
+
       })
       .catch((err) => {
           const parsedError = err.json();
           this.loginErrorMessage = parsedError.message + ' 😤';
       }); 
       
-      console.log('success homie');
   }
 }

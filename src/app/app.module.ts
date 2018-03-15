@@ -3,14 +3,17 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms'
 
-// routes
+// Routing Module
 import { AppRoutingModule } from './app-routing.module';
 
-// Service Stuff (Components)
+// Service & Stuff 
 import { AuthService } from './services/auth.service';
 
+// Components & Stuff
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
+
+
 
 @NgModule({
   declarations: [

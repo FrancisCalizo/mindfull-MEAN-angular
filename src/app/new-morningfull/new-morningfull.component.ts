@@ -14,11 +14,11 @@ import { environment } from '../../environments/environment'
 export class NewMorningfullComponent implements OnInit {
 
   morningData = {
-    date     : "",
-    grateful : [],
-    tasks    : [],
-    photoUrl : "",
-    word     : ""
+    morningDate     : "",
+    morningGrateful : [],
+    morningTasks    : [],
+    morningPhotoUrl : "",
+    morningWord     : ""
   }
 
   saveError: string;
@@ -47,11 +47,11 @@ export class NewMorningfullComponent implements OnInit {
       .then( res => {
         // This clear the new phone after saving
         this.morningData = { 
-          date     : "",
-          grateful : [],
-          tasks    : [],
-          photoUrl : "",
-          word     : ""
+          morningDate     : "",
+          morningGrateful : [],
+          morningTasks    : [],
+          morningPhotoUrl : "",
+          morningWord     : ""
         }
         this.saveError = '';
         this.myRouter.navigate(['/dashboard'])

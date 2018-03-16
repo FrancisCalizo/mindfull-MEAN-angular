@@ -5,25 +5,28 @@
 
 <form (ngSubmit)="saveMorningfull()">
 
-  <label for="morningfull-date"> MorningFull Date </label>
-  <input id="morningfull-date" type="text" placeholder="Date" [(ngModel)]="morningData.date" name="date">
+  <label for="morningfull-date"> MorningFull Date <strong>HAS TO BE IN MM/DD/YYYY format!!!</strong> </label>
+  <input id="morningfull-date" type="text" placeholder="Date" [(ngModel)]="morningData.morningDate" name="morningDate">
   <br>
 
   <label for="morningfull-grateful"> MorningFull Grateful </label>
-  <input id="morningfull-grateful" type="text" placeholder="I am Grateful for..[Needs to be array eventually]" [(ngModel)]="morningData.grateful" name="grateful" >
+  <input id="morningfull-grateful" type="text" placeholder="I am Grateful for..[Needs to be array eventually]" [(ngModel)]="morningData.morningGrateful" name="morningGrateful" >
   <br>
   
   <label for="morningfull-Tasks"> MorningFull Tasks </label>
-  <input id="morningfull-Tasks" type="text" placeholder="Tasks [Array Eventually]" [(ngModel)]="morningData.tasks" name="tasks">
+  <input id="morningfull-Tasks" type="text" placeholder="Tasks [Array Eventually]" [(ngModel)]="morningData.morningTasks" name="morningTasks">
   <br>
 
   <label for="morningfull-photoUrl"> MorningFull PhotoURL </label>
-  <input id="morningfull-photoUrl" type="text" placeholder="Photo URL" [(ngModel)]="morningData.photoUrl" name="photoUrl">
+  <input id="morningfull-photoUrl" type="text" placeholder="Photo URL" [(ngModel)]="morningData.morningPhotoUrl" name="morningPhotoUrl">
   <br>
 
   <label for="morningfull-word"> MorningFull word </label>
-  <input id="morningfull-word" type="text" placeholder="Morning Word" [(ngModel)]="morningData.word" name="word">
+  <input id="morningfull-word" type="text" placeholder="Morning Word" [(ngModel)]="morningData.morningWord" name="morningWord">
   <br>
+
+  <button> Save Phone </button>
+</form>
 
   <!-- <fieldset>
     <label>1</label>
@@ -45,6 +48,3 @@
           </div>
       </div>
   </fieldset> -->
-
-  <button> Save Phone </button>
-</form>

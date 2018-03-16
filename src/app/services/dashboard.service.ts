@@ -22,4 +22,13 @@ export class DashboardService {
             .then(res => res.json())
             // .map(res => res.json())
     }
+
+      // Getting Evening entry details
+      getEveningId(id){
+        return this.http.get(`${environment.apiBase}/dashboard/eveningfull/${id}`,
+              { withCredentials: true })
+              .toPromise()
+              .then(res => res.json())
+              // .map(res => res.json())
+      }
 }

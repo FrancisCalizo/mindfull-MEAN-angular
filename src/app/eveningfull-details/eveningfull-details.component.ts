@@ -6,11 +6,11 @@ import { DashboardService } from "../services/dashboard.service";
 import { environment } from "../../environments/environment";
 
 @Component({
-  selector: 'app-morningfull-details',
-  templateUrl: './morningfull-details.component.html',
-  styleUrls: ['./morningfull-details.component.css']
+  selector: 'app-eveningfull-details',
+  templateUrl: './eveningfull-details.component.html',
+  styleUrls: ['./eveningfull-details.component.css']
 })
-export class MorningfullDetailsComponent implements OnInit {
+export class EveningfullDetailsComponent implements OnInit {
   entry = <any>{}
 
   baseUrl = environment.apiBase;
@@ -38,11 +38,11 @@ export class MorningfullDetailsComponent implements OnInit {
     // });
   }
 
-  getMorningDetails(id){
-    this.myDashboardService.getMorningId(id)
+  getEveningDetails(id){
+    this.myDashboardService.getEveningId(id)
       .then( res => {
           this.entry = res;
-          console.log("Morning Entry details: ", this.entry)
+          console.log("Evening Entry details: ", this.entry)
       } )
       .catch()
   }

@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MorningfullDetailsComponent } from './morningfull-details/morningfull-details.component';
 import { EveningfullDetailsComponent } from './eveningfull-details/eveningfull-details.component';
+import { NewMorningfullComponent } from './new-morningfull/new-morningfull.component';
 
 
 
@@ -28,6 +29,7 @@ import { EveningfullDetailsComponent } from './eveningfull-details/eveningfull-d
     DashboardComponent,
     MorningfullDetailsComponent,
     EveningfullDetailsComponent,
+    NewMorningfullComponent,
   ],
   imports: [
     BrowserModule,

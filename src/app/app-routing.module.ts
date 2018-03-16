@@ -1,10 +1,12 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
+
 import { SignupComponent } from "./signup/signup.component";
 import { LoginComponent } from "./login/login.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MorningfullDetailsComponent } from "./morningfull-details/morningfull-details.component";
 import { EveningfullDetailsComponent } from "./eveningfull-details/eveningfull-details.component";
+import { NewMorningfullComponent } from "./new-morningfull/new-morningfull.component";
 
 const routes: Routes = [
   // Make sure no leading dash
@@ -19,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',   
-    component: DashboardComponent
+    component: DashboardComponent,
   },
   {
     path: "dashboard/morningfull/:id",  
@@ -28,6 +30,10 @@ const routes: Routes = [
   {
     path: "dashboard/eveningfull/:id",  
     component: EveningfullDetailsComponent
+  },
+  {
+    path: "dashboard/newmorningfull",  
+    component: NewMorningfullComponent,
   }
 ]
 

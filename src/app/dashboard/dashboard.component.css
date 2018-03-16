@@ -1,0 +1,15 @@
+h1{
+  text-align: center;
+}
+
+.morning-entries, .evening-entries{
+  width: 40%;
+  float: left;
+  text-align: center;
+  padding: 50px;
+}
+
+.morning-entries ul, .evening-entries ul{
+  list-style-type: none;
+}
+

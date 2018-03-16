@@ -33,9 +33,9 @@ export class MorningfullDetailsComponent implements OnInit {
         console.log(err);
         this.myRouter.navigate(["/"]);
       });
-    // this.myRoute.params.subscribe(params => {
-    //   this.getPhoneDetails(params["id"]);
-    // });
+    this.myRoute.params.subscribe(params => {
+      this.getMorningDetails(params["id"]);
+    });
   }
 
   getMorningDetails(id){

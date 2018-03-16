@@ -1,3 +1,14 @@
-<p>
-  MORNINGFUL-details works!
-</p>
+<h1>Morningfull Entry Details:</h1>
+
+<h3>What I'm grateful for:</h3>
+<ul *ngFor=" let grateful of entry.grateful ">
+  <li> {{ grateful }}</li>
+</ul>
+
+<h3>Tasks to be completed today:</h3>
+<ul *ngFor=" let task of entry.tasks ">
+  <li> {{ task }}</li>
+</ul>
+
+<h3>One word to Describe How I want today to go:</h3>
+<p> {{ entry.word }} </p>

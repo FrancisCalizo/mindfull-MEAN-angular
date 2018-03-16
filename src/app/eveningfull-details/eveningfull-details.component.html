@@ -1,3 +1,16 @@
-<p>
-  eveningfull-details works!
-</p>
+<h1>Eveningfull Entry Details:</h1>
+
+<h3>What I Accomplished:</h3>
+<ul *ngFor=" let accomplishment of entry.accomplishments ">
+  <li> {{ accomplishment }}</li>
+</ul>
+<h3>What I could have done differently:</h3>
+<p> {{ entry.different }} </p>
+
+<h3>What I learned:</h3>
+<ul *ngFor=" let learn of entry.learn ">
+  <li> {{ learn }}</li>
+</ul>
+
+<h3>One word to describe today</h3>
+<p> {{ entry.word }} </p>

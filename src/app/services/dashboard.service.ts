@@ -41,7 +41,7 @@ export class DashboardService {
     .then(res => res.json());
   }
 
-// Using promise to Create New Morningfull
+  // Using promise to Create New Morningfull
   createNewEvening(dataToSend){
     return this.http  
       .post (`${environment.apiBase}/dashboard/eveningfull/new`, dataToSend, { withCredentials: true})
@@ -50,9 +50,16 @@ export class DashboardService {
     }  
 
 
-// Delete Morningfull
+  // Delete Morningfull
   deleteMorning(id){
     return this.http.delete(`${environment.apiBase}/dashboard/morningfull/${id}`,
+        { withCredentials: true })
+        .toPromise()
+  }
+
+  // Delete Eveningfull
+  deleteEvening(id){
+    return this.http.delete(`${environment.apiBase}/dashboard/eveningfull/${id}`,
         { withCredentials: true })
         .toPromise()
   }

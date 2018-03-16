@@ -46,4 +46,17 @@ export class EveningfullDetailsComponent implements OnInit {
       } )
       .catch()
   }
+
+  deleteThisEvening(){
+    if (!confirm("Are you sure?")) {
+      return;
+    }
+    this.myDashboardService.deleteEvening(this.entry._id)
+      .then( res => {
+        this.myRouter.navigate(['/dashboard'])
+      })
+      .catch( err => {
+        console.log("Error in deleting:", err)
+      })
+  } 
 }

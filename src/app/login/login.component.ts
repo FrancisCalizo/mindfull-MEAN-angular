@@ -47,8 +47,8 @@ export class LoginComponent implements OnInit {
           // clear the error message
           this.loginErrorMessage = "";
 
-          // redirect to / ******* CHANGE AFTER
-          this.myRouter.navigate(['/']);
+          // redirect to User Dashboard
+          this.myRouter.navigate(['/dashboard']);
 
           // For Logout Testing
           this.isLoggedOut = !this.isLoggedOut;
@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
       })
       .catch((err) => {
           const parsedError = err.json();
-          this.loginErrorMessage = parsedError.message + ' 😤';
+          this.loginErrorMessage = parsedError.message;
       }); 
       
   }

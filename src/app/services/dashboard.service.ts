@@ -9,7 +9,7 @@ export class DashboardService {
   constructor( private http: Http ) { }
 
   retrieveEntries(){
-    return this.http.get(`${environment.apiBase}/phones`,
+    return this.http.get(`${environment.apiBase}/dashboard`,
     { withCredentials: true })
     .map(res => res.json())
   }

@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit {
       .then(resultFromApi => {
         this.currentUser = resultFromApi;
         console.log("user is: ", resultFromApi);
-        this.getThePhones()
+        this.getEntries()
       })
 
       // Even if you don't do anything on error, catch to avoid a console error.
@@ -39,20 +39,20 @@ export class DashboardComponent implements OnInit {
     // this.getThePhones();
   }
 
-  getThePhones() {
+  getEntries() {
     this.myDashboardService.retrieveEntries()
-    .subscribe(allThePhones => {
-      // console.log("allThePhones: ", allThePhones)
-        this.entries = allThePhones;
-        console.log("phones", this.entries)
+    .subscribe(allEntries => {
+      // console.log("allEntries: ", allEntries)
+        this.entries = allEntries;
+        console.log("entries", this.entries)
       },
       () => {
-        this.entryListError = "Sorry, no phones.";
+        this.entryListError = "Sorry, no entries.";
       }
     );
-  } // close getThePhones()
+  } // close getEntries()
 
-  logMeOutPls() {
+  logMeOut() {
     this.myAuthService
       .logout()
       .then(() => {
@@ -61,5 +61,5 @@ export class DashboardComponent implements OnInit {
       .catch(() => {
         this.logoutError = "Log out went bad.";
       });
-  } // close logMeOutPls()
+  } // close logMeOut()
 }

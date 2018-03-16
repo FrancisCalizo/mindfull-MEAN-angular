@@ -48,4 +48,12 @@ export class DashboardService {
       .toPromise()
       .then(res => res.json());
     }  
+
+
+// Delete Morningfull
+  deleteMorning(id){
+    return this.http.delete(`${environment.apiBase}/dashboard/morningfull/${id}`,
+        { withCredentials: true })
+        .toPromise()
+  }
 }

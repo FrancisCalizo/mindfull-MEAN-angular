@@ -18,6 +18,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MorningfullDetailsComponent } from './morningfull-details/morningfull-details.component';
 import { EveningfullDetailsComponent } from './eveningfull-details/eveningfull-details.component';
 import { NewMorningfullComponent } from './new-morningfull/new-morningfull.component';
+import { NewEveningfullComponent } from './new-eveningfull/new-eveningfull.component';
 
 
 
@@ -30,6 +31,7 @@ import { NewMorningfullComponent } from './new-morningfull/new-morningfull.compo
     MorningfullDetailsComponent,
     EveningfullDetailsComponent,
     NewMorningfullComponent,
+    NewEveningfullComponent,
   ],
   imports: [
     BrowserModule,

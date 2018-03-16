@@ -7,6 +7,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { MorningfullDetailsComponent } from "./morningfull-details/morningfull-details.component";
 import { EveningfullDetailsComponent } from "./eveningfull-details/eveningfull-details.component";
 import { NewMorningfullComponent } from "./new-morningfull/new-morningfull.component";
+import { NewEveningfullComponent } from "./new-eveningfull/new-eveningfull.component";
 
 const routes: Routes = [
   // Make sure no leading dash
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: "dashboard/newmorningfull",  
     component: NewMorningfullComponent,
+  },
+  {
+    path: "dashboard/neweveningfull",  
+    component: NewEveningfullComponent,
   }
 ]
 

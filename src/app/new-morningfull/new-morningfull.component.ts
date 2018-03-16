@@ -13,6 +13,16 @@ import { environment } from '../../environments/environment'
 })
 export class NewMorningfullComponent implements OnInit {
 
+  morningData = {
+    date     : "",
+    grateful : [],
+    tasks    : [],
+    photoUrl : "",
+    word     : ""
+  }
+
+  saveError: string;
+
   constructor( 
     private myDashboardService: DashboardService, 
     private myAuthService: AuthService,
@@ -32,4 +42,20 @@ export class NewMorningfullComponent implements OnInit {
     });
   }
 
+  saveMorningfull(){
+    this.myDashboardService.createNewMorning(this.morningData)
+      .then( res => {
+        // This clear the new phone after saving
+        this.morningData = { 
+          date     : "",
+          grateful : [],
+          tasks    : [],
+          photoUrl : "",
+          word     : ""
+        }
+        this.saveError = '';
+        this.myRouter.navigate(['/dashboard'])
+  })
+  .catch( err => { this.saveError = "Something is wrong with saving"})
+  }
 }

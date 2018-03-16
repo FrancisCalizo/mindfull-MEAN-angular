@@ -12,8 +12,8 @@ import { environment } from "../../environments/environment";
 export class DashboardComponent implements OnInit {
   logoutError: string;
   entryListError: string;
-  entries: any;
-  currentUser: string;
+  entries: Object[];
+  currentUser: Object = {};
 
   constructor(
     private myAuthService: AuthService,
@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
         console.log(err);
         this.myRouter.navigate(["/"]);
       });
-    // this.getThePhones();
+    // this.getEntries();
   }
 
   getEntries() {

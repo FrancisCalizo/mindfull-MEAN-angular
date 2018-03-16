@@ -1,4 +1,20 @@
 <h1>
-  dashboard works!
+  Hey {{ currentUser.username }}, Welcome to the Dashboard!
   <button (click)="logMeOut()">Log Out</button>  
 </h1>
+
+<hr>
+
+<h2>Display the Entries Here:</h2>
+
+<div>
+  <h3>This Date is hard-coded</h3>
+  {{ entries?.eveningEntries[0].date }}
+</div>
+
+<div>
+  <h3>This Data (tries) using a ngFor Loop</h3>
+  <div *ngFor="let entry of entries?.eveningEntries">
+    {{ entry.date }}
+   </div>
+</div>

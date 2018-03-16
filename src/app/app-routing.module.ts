@@ -7,8 +7,8 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 const routes: Routes = [
   // Make sure no leading dash
   // WILL NEED A HOMEPAGE COMPONENT EVENTUALLY
-  {path: 'signup', component: SignupComponent},
-  {path: 'login', component: LoginComponent},
+  {path: 'signup',    component: SignupComponent},
+  {path: 'login',     component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent}
 ]
 

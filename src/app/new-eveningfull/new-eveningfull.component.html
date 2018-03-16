@@ -1,3 +1,33 @@
-<p>
-  new-eveningfull works!
+<h1>Add a new EVENINGFULL:</h1>
+<p *ngIf="saveError" class="error">
+  {{ saveError }}
 </p>
+
+<form (ngSubmit)="saveEveningfull()">
+
+  <label for="eveningfull-date"> EveningFull Date </label>
+  <input id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="eveningData.eveningDate" name="eveningDate">
+  <br>
+
+  <label for="eveningfull-grateful"> EveningFull Accomplishments  </label>
+  <input id="eveningfull-grateful" type="text" placeholder="I Accomplished..[Needs to be array eventually]" [(ngModel)]="eveningData.eveningAccomplishments" name="eveningAccomplishments" >
+  <br>
+  
+  <label for="eveningfull-Tasks"> eveningFull Learn </label>
+  <input id="eveningfull-Tasks" type="text" placeholder="Learn [Array Eventually]" [(ngModel)]="eveningData.eveningLearn" name="eveningLearn">
+  <br>
+
+  <label for="eveningfull-Different"> EveningFull Different </label>
+  <input id="eveningfull-Different" type="text" placeholder="What I could have done differently" [(ngModel)]="eveningData.morningDifferent" name="eveningDifferent">
+  <br>
+
+  <label for="eveningfull-rating"> Eveningfull Rating </label>
+  <input id="eveningfull-rating" type="number" [(ngModel)]="eveningData.eveningRating" name="eveningRating">
+  <br>
+
+  <label for="eveningfull-Word"> EveningFull Word </label>
+  <input id="eveningfull-Word" type="text" placeholder="Blessed" [(ngModel)]="eveningData.eveningWord" name="eveningWord">
+  <br>
+
+  <button> Save Eveningfull </button>
+</form>

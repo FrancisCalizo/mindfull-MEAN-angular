@@ -44,7 +44,7 @@ export class DashboardService {
 // Using promise to Create New Morningfull
   createNewEvening(dataToSend){
     return this.http  
-      .post (`${environment.apiBase}/dashboard/neweveningfull'`, dataToSend, { withCredentials: true})
+      .post (`${environment.apiBase}/dashboard/eveningfull/new`, dataToSend, { withCredentials: true})
       .toPromise()
       .then(res => res.json());
     }  

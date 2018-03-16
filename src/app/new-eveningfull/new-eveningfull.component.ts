@@ -12,6 +12,18 @@ import { environment } from '../../environments/environment'
 })
 export class NewEveningfullComponent implements OnInit {
 
+  eveningData = {
+    eveningDate            : "",
+    eveningAccomplishments : [],
+    eveningLearn           : [],
+    eveningDifferent       : "",
+    eveningRating          : null,
+    eveningPhotoPath       : "",
+    eveningWord            : ""
+  }
+
+  saveError: string;
+
   constructor( 
     private myDashboardService: DashboardService, 
     private myAuthService: AuthService,
@@ -29,6 +41,25 @@ export class NewEveningfullComponent implements OnInit {
       console.log(err);
       this.myRouter.navigate(["/"]);
     });
+  }
+
+  saveEveningfull(){
+    this.myDashboardService.createNewEvening(this.eveningData)
+      .then( res => {
+        // This clear the new phone after saving
+        this.eveningData = { 
+          eveningDate            : "",
+          eveningAccomplishments : [],
+          eveningLearn           : [],
+          eveningDifferent       : "",
+          eveningRating          : null,
+          eveningPhotoPath       : "",
+          eveningWord            : ""
+        }
+        this.saveError = '';
+        this.myRouter.navigate(['/dashboard'])
+  })
+  .catch( err => { this.saveError = "Something is wrong with saving"})
   }
 
 }

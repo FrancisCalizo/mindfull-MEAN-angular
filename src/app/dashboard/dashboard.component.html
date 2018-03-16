@@ -9,30 +9,31 @@
     <h2>
       <a [routerLink]="['/dashboard/newmorningfull']">Add a new MORNING ENTRY</a>
     </h2>
-    <div>
-      <ul *ngFor="let entry of entries?.morningEntries">
-        <li>
-          <a [routerLink]="['/dashboard/morningfull', entry._id]"> {{ entry.date }} </a>
-        </li>
+    <div *ngFor="let entry of entries?.morningEntries" class="single-entry">
+      <a [routerLink]="['/dashboard/morningfull', entry._id]"> VIEW THIS MORNING ENTRY </a>
+      <ul>
+        <li> {{ entry.date }} </li>
         <li> {{ entry.grateful }} </li>
         <li> {{ entry.tasks }} </li>
         <li> {{ entry.word }} </li>
       </ul>
     </div>
   </div>
+
   <div class="evening-entries">
     <h2>ALL EVENING ENTRIES DISPLAYED HERE</h2>
     <h2>
       <a [routerLink]="['/dashboard/neweveningfull']">Add a new EVENING ENTRY</a>
     </h2>
-    <ul *ngFor="let entry of entries?.eveningEntries">
-      <li>
-        <a [routerLink]="['/dashboard/eveningfull', entry._id]"> {{ entry.date }} </a>
-      </li>
-      <li> {{ entry.accomplishments }} </li>
-      <li> {{ entry.different }} </li>
-      <li> {{ entry.learn }}  </li>
-      <li> {{ entry.word }} </li>
-    </ul>
-  </div>
+    <div *ngFor="let entry of entries?.eveningEntries" class="single-entry">
+      <a [routerLink]="['/dashboard/eveningfull', entry._id]"> View this EVENING ENTRY </a>
+      <ul>
+        <li>{{ entry.date }}</li>
+        <li> {{ entry.accomplishments }} </li>
+        <li> {{ entry.different }} </li>
+        <li> {{ entry.learn }}  </li>
+        <li> {{ entry.word }} </li>
+      </ul>
+    </div>
+  </div>  
 </div>

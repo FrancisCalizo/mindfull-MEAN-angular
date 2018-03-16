@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MorningfullDetailsComponent } from './morningfull-details/morningfull-details.component';
 
 
 
@@ -24,6 +25,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SignupComponent,
     LoginComponent,
     DashboardComponent,
+    MorningfullDetailsComponent,
   ],
   imports: [
     BrowserModule,

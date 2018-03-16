@@ -13,4 +13,13 @@ export class DashboardService {
     { withCredentials: true })
     .map(res => res.json())
   }
+
+    // Getting MORNING entry details
+    getMorningId(id){
+      return this.http.get(`${environment.apiBase}/dashboard/morningfull/${id}`,
+            { withCredentials: true })
+            .toPromise()
+            .then(res => res.json())
+            // .map(res => res.json())
+    }
 }

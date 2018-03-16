@@ -7,7 +7,9 @@
   <h2>ALL MORNING ENTRIES DISPLAYED HERE</h2>
   <div>
     <ul *ngFor="let entry of entries?.morningEntries">
-      <li> {{ entry.date }} </li>
+      <li>
+        <a [routerLink]="['/dashboard/morningfull', entry._id]"> {{ entry.date }} </a>
+      </li>
       <li> {{ entry.grateful }} </li>
       <li> {{ entry.tasks }} </li>
       <li> {{ entry.word }} </li>
@@ -18,7 +20,9 @@
 <div>
   <h2>ALL EVENING ENTRIES DISPLAYED HERE</h2>
   <ul *ngFor="let entry of entries?.eveningEntries">
-    <li> {{ entry.date }} </li>
+    <li>
+      <a [routerLink]="['/dashboard/eveningfull', entry._id]"> {{ entry.date }} </a>
+    </li>
     <li> {{ entry.accomplishments }} </li>
     <li> {{ entry.different }} </li>
     <li> {{ entry.learn }}  </li>

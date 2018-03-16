@@ -3,18 +3,25 @@
   <button (click)="logMeOut()">Log Out</button>  
 </h1>
 
-<hr>
-
-<h2>Display the Entries Here:</h2>
-
 <div>
-  <h3>This Date is hard-coded</h3>
-  {{ entries?.eveningEntries[0].date }}
+  <h2>ALL MORNING ENTRIES DISPLAYED HERE</h2>
+  <div>
+    <ul *ngFor="let entry of entries?.morningEntries">
+      <li> {{ entry.date }} </li>
+      <li> {{ entry.grateful }} </li>
+      <li> {{ entry.tasks }} </li>
+      <li> {{ entry.word }} </li>
+    </ul>
+   </div>
 </div>
 
 <div>
-  <h3>This Data (tries) using a ngFor Loop</h3>
-  <div *ngFor="let entry of entries?.eveningEntries">
-    {{ entry.date }}
-   </div>
+  <h2>ALL EVENING ENTRIES DISPLAYED HERE</h2>
+  <ul *ngFor="let entry of entries?.eveningEntries">
+    <li> {{ entry.date }} </li>
+    <li> {{ entry.accomplishments }} </li>
+    <li> {{ entry.different }} </li>
+    <li> {{ entry.learn }}  </li>
+    <li> {{ entry.word }} </li>
+  </ul>
 </div>

@@ -1,0 +1,21 @@
+<p>Update From</p>
+<form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
+
+  <label for="morningfull-grateful"> Grateful </label>
+  <input id="morningfull-grateful" type="text"  [(ngModel)]="entry.grateful" name="morningGrateful" value="{{ entry.grateful }}">
+  <br>
+
+  <label for="morningfull-tasks"> tasks </label>
+  <input id="morningfull-tasks" type="text"  [(ngModel)]="entry.tasks" name="morningTasks" value="{{ entry.tasks }}">
+  <br>
+
+  <label for="morningfull-photoUrl"> Photo URL </label>
+  <input id="morningfull-photoUrl" type="text"  [(ngModel)]="entry.photoUrl" name="morningPhotoUrl" value="{{ entry.photoUrl }}">
+  <br>
+
+  <label for="morningfull-photoUrl"> Word </label>
+  <input id="morningfull-photoUrl" type="text"  [(ngModel)]="entry.word" name="morningWord" value="{{ entry.word }}">
+  <br>
+
+  <button type="submit">Save updates</button>
+</form>

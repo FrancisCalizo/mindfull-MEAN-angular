@@ -1,6 +1,9 @@
 <h1>Morningfull Entry Details:</h1>
 <button (click)="deleteThisMorning()">DELETE</button>
 
+<a [routerLink]="['/dashboard/editmorningfull', entry._id]">EDIT ENTRY</a>
+
+
 <h3>What I'm grateful for:</h3>
 <ul *ngFor=" let grateful of entry.grateful ">
   <li> {{ grateful }}</li>

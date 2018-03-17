@@ -15,7 +15,7 @@ export class DashboardService {
     .map(res => res.json())
   }
 
-  // Getting MORNING entry details
+  // Read Morning entry details
   getMorningId(id){
     return this.http.get(`${environment.apiBase}/dashboard/morningfull/${id}`,
       { withCredentials: true })
@@ -24,7 +24,7 @@ export class DashboardService {
       // .map(res => res.json())
   }
 
-  // Getting Evening entry details
+  // Read Evening entry details
   getEveningId(id){
     return this.http.get(`${environment.apiBase}/dashboard/eveningfull/${id}`,
       { withCredentials: true })
@@ -63,4 +63,11 @@ export class DashboardService {
         { withCredentials: true })
         .toPromise()
   }
+
+  // Update Morningfull 
+  updateMorning(id, updates){
+    return this.http.put(`${environment.apiBase}/dashboard/morningfull/edit/${id}`, updates, { withCredentials: true })
+    .map(res => res.json());
+  }
+
 }

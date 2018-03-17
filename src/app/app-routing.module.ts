@@ -8,6 +8,8 @@ import { MorningfullDetailsComponent } from "./morningfull-details/morningfull-d
 import { EveningfullDetailsComponent } from "./eveningfull-details/eveningfull-details.component";
 import { NewMorningfullComponent } from "./new-morningfull/new-morningfull.component";
 import { NewEveningfullComponent } from "./new-eveningfull/new-eveningfull.component";
+import { MorningfullEditComponent } from './morningfull-edit/morningfull-edit.component';
+
 
 const routes: Routes = [
   // Make sure no leading dash
@@ -26,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: "dashboard/morningfull/:id",  
-    component: MorningfullDetailsComponent
+    component: MorningfullDetailsComponent,
   },
   {
     path: "dashboard/eveningfull/:id",  
@@ -39,6 +41,10 @@ const routes: Routes = [
   {
     path: "dashboard/neweveningfull",  
     component: NewEveningfullComponent,
+  },
+  {
+    path: "dashboard/editmorningfull/:id",  
+    component: MorningfullEditComponent,
   }
 ]
 

@@ -61,7 +61,7 @@ export class MorningfullEditComponent implements OnInit {
     
     const formInfo = formData.form.controls;
     this.updatedMorningGrateful   = formInfo.morningGrateful.value;
-    this.updatedMorningTasks      = formInfo.morningName.value;
+    this.updatedMorningTasks      = formInfo.morningTasks.value;
     this.updatedMorningPhotoUrl   = formInfo.morningPhotoUrl.value;
     this.updatedMorningWord       = formInfo.morningWord.value
     this.sendUpdatesToApi(id)
@@ -69,7 +69,7 @@ export class MorningfullEditComponent implements OnInit {
   
   sendUpdatesToApi(id){
     this.updatedMorningfull = {
-        morningGratefull : this.updatedMorningGrateful,
+        morningGrateful : this.updatedMorningGrateful,
         morningTasks     : this.updatedMorningTasks,
         morningPhotoUrl  : this.updatedMorningPhotoUrl
         morningWord      : this.updatedMorningWord

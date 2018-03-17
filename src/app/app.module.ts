@@ -20,6 +20,7 @@ import { EveningfullDetailsComponent } from './eveningfull-details/eveningfull-d
 import { NewMorningfullComponent } from './new-morningfull/new-morningfull.component';
 import { NewEveningfullComponent } from './new-eveningfull/new-eveningfull.component';
 import { MorningfullEditComponent } from './morningfull-edit/morningfull-edit.component';
+import { EveningfullEditComponent } from './eveningfull-edit/eveningfull-edit.component';
 
 
 
@@ -34,6 +35,7 @@ import { MorningfullEditComponent } from './morningfull-edit/morningfull-edit.co
     NewMorningfullComponent,
     NewEveningfullComponent,
     MorningfullEditComponent,
+    EveningfullEditComponent,
   ],
   imports: [
     BrowserModule,

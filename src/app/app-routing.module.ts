@@ -9,6 +9,7 @@ import { EveningfullDetailsComponent } from "./eveningfull-details/eveningfull-d
 import { NewMorningfullComponent } from "./new-morningfull/new-morningfull.component";
 import { NewEveningfullComponent } from "./new-eveningfull/new-eveningfull.component";
 import { MorningfullEditComponent } from './morningfull-edit/morningfull-edit.component';
+import { EveningfullEditComponent } from './eveningfull-edit/eveningfull-edit.component';
 
 
 const routes: Routes = [
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: "dashboard/editmorningfull/:id",  
     component: MorningfullEditComponent,
+  },
+  {
+    path: "dashboard/editeveningfull/:id",  
+    component: EveningfullEditComponent,
   }
 ]
 

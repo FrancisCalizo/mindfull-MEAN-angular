@@ -1,0 +1,29 @@
+<p>Update From</p>
+<form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
+
+  <label for="eveningfull-accomplishments"> Accomplishments </label>
+  <input id="eveningfull-accomplishments" type="text"  [(ngModel)]="entry.accomplishments" name="eveningAccomplishments" value="{{ entry.accomplishments }}">
+  <br>
+
+  <label for="eveningfull-learn"> Learn </label>
+  <input id="eveningfull-learn" type="text"  [(ngModel)]="entry.learn" name="eveningLearn" value="{{ entry.learn }}">
+  <br>
+
+  <label for="eveningfull-different"> Different</label>
+  <input id="eveningfull-different" type="text"  [(ngModel)]="entry.different" name="eveningDifferent" value="{{ entry.different }}">
+  <br>
+
+  <label for="eveningfull-rating"> Rating </label>
+  <input id="eveningfull-rating" type="number"  [(ngModel)]="entry.rating" name="eveningRating" value="{{ entry.rating }}">
+  <br>
+
+  <label for="eveningfull-photoPath"> PhotoPath </label>
+  <input id="eveningfull-photoPath" type="text"  [(ngModel)]="entry.photoPath" name="eveningPhotoPath" value="{{ entry.photoPath }}">
+  <br>
+
+  <label for="eveningfull-word"> Word </label>
+  <input id="eveningfull-word" type="text"  [(ngModel)]="entry.word" name="eveningWord" value="{{ entry.word }}">
+  <br>
+
+  <button type="submit">Save updates</button>
+</form>

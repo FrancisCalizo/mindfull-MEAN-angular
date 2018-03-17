@@ -70,4 +70,9 @@ export class DashboardService {
     .map(res => res.json());
   }
 
+  // Update Eveningfull 
+  updateEvening(id, updates){
+    return this.http.put(`${environment.apiBase}/dashboard/eveningfull/edit/${id}`, updates, { withCredentials: true })
+    .map(res => res.json());
+  }
 }

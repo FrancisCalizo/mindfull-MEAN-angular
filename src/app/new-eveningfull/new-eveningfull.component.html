@@ -9,13 +9,69 @@
   <input id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="eveningData.eveningDate" name="eveningDate">
   <br>
 
+  <!--
   <label for="eveningfull-grateful"> EveningFull Accomplishments  </label>
   <input id="eveningfull-grateful" type="text" placeholder="I Accomplished..[Needs to be array eventually]" [(ngModel)]="eveningData.eveningAccomplishments" name="eveningAccomplishments" >
   <br>
-  
+  -->
+
+  <fieldset>      
+    <div class="form-group">
+        <label>Accomplishments 1</label>
+        <div>
+            <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>  
+        </div>
+    </div>
+  </fieldset>
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1"> Accomplishments 2</label>
+          <div class="col-sm-11">
+              <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
+  <fieldset>
+      <div class="form-group">
+        <label class="col-sm-1">Accomplishments 3</label>
+        <div class="col-sm-11">
+            <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
+        </div>
+      </div>
+  </fieldset>
+    <br> 
+
+  <!--
   <label for="eveningfull-Tasks"> eveningFull Learn </label>
   <input id="eveningfull-Tasks" type="text" placeholder="Learn [Array Eventually]" [(ngModel)]="eveningData.eveningLearn" name="eveningLearn">
   <br>
+  -->
+
+  <fieldset>      
+      <div class="form-group">
+          <label>Learn 1</label>
+          <div>
+              <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>  
+          </div>
+      </div>
+  </fieldset>
+      <fieldset>
+        <div class="form-group">
+            <label class="col-sm-1"> Learn 2</label>
+            <div class="col-sm-11">
+                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
+            </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="form-group">
+            <label class="col-sm-1">Learn 3</label>
+            <div class="col-sm-11">
+                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
+            </div>
+        </div>
+    </fieldset> 
+
 
   <label for="eveningfull-Different"> EveningFull Different </label>
   <input id="eveningfull-Different" type="text" placeholder="What I could have done differently" [(ngModel)]="eveningData.eveningDifferent" name="eveningDifferent">

@@ -12,7 +12,10 @@ import { environment } from "../../environments/environment";
 })
 export class EveningfullEditComponent implements OnInit {
 
-  entry = <any>{}
+  entry = <any> {
+    accomplishments : ['', '', ''];
+    learn : ['', '', ''];
+  }
 
   baseUrl = environment.apiBase;
   
@@ -61,12 +64,16 @@ export class EveningfullEditComponent implements OnInit {
     console.log("formData",formData)
     
     const formInfo = formData.form.controls;
-    this.updatedEveningAccomplishments   = formInfo.eveningAccomplishments.value;
-    this.updatedEveningLearn             = formInfo.eveningLearn.value;
-    this.updatedEveningDifferent         = formInfo.eveningDifferent.value;
-    this.updatedEveningRating            = formInfo.eveningRating.value;
-    this.updatedEveningPhotoPath         = formInfo.eveningPhotoPath.value;
-    this.updatedEveningWord              = formInfo.eveningWord.value
+    this.updatedEveningAccomplishments[0]   = formInfo.eveningAccomplishments0.value;
+    this.updatedEveningAccomplishments[1]   = formInfo.eveningAccomplishments1.value;
+    this.updatedEveningAccomplishments[2]   = formInfo.eveningAccomplishments2.value;
+    this.updatedEveningLearn[0]             = formInfo.eveningLearn0.value;
+    this.updatedEveningLearn[1]             = formInfo.eveningLearn1.value;
+    this.updatedEveningLearn[2]             = formInfo.eveningLearn2.value;
+    this.updatedEveningDifferent            = formInfo.eveningDifferent.value;
+    this.updatedEveningRating               = formInfo.eveningRating.value;
+    this.updatedEveningPhotoPath            = formInfo.eveningPhotoPath.value;
+    this.updatedEveningWord                 = formInfo.eveningWord.value
     this.sendUpdatesToApi(id)
   }
 

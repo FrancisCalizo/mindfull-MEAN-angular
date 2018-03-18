@@ -1,12 +1,68 @@
 <p>Update From</p>
 <form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
 
+  <!--
   <label for="eveningfull-accomplishments"> Accomplishments </label>
   <input id="eveningfull-accomplishments" type="text"  [(ngModel)]="entry.accomplishments" name="eveningAccomplishments" value="{{ entry.accomplishments }}">
   <br>
+  -->
 
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">accomplishments 1</label>
+          <div class="col-sm-11">
+              <textarea name="eveningAccomplishments0" [(ngModel)]="entry.accomplishments[0]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">accomplishments 2</label>
+          <div class="col-sm-11">
+              <textarea name="eveningAccomplishments1" [(ngModel)]="entry.accomplishments[1]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">accomplishments 3</label>
+          <div class="col-sm-11">
+              <textarea name="eveningAccomplishments2" [(ngModel)]="entry.accomplishments[2]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
+  <br>
+
+  <!--
   <label for="eveningfull-learn"> Learn </label>
   <input id="eveningfull-learn" type="text"  [(ngModel)]="entry.learn" name="eveningLearn" value="{{ entry.learn }}">
+  <br>
+  -->
+
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">learn 1</label>
+          <div class="col-sm-11">
+              <textarea name="eveningLearn0" [(ngModel)]="entry.learn[0]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">learn 2</label>
+          <div class="col-sm-11">
+              <textarea name="eveningLearn1" [(ngModel)]="entry.learn[1]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">learn 3</label>
+          <div class="col-sm-11">
+              <textarea name="eveningLearn2" [(ngModel)]="entry.learn[2]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
   <br>
 
   <label for="eveningfull-different"> Different</label>

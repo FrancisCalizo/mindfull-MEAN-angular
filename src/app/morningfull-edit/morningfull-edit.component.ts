@@ -14,7 +14,8 @@ export class MorningfullEditComponent implements OnInit {
 
   entry = <any>{
     // Must define these in order for ngModel to work
-    grateful: ['', '', '']; 
+    grateful : ['', '', '']; 
+    tasks    : ['', '', ''];
   }
 
   baseUrl = environment.apiBase;
@@ -63,10 +64,12 @@ export class MorningfullEditComponent implements OnInit {
     console.log("formData",formData)
     
     const formInfo = formData.form.controls;
-    this.updatedMorningGrateful[0]   = formInfo.morningGrateful1.value;
-    this.updatedMorningGrateful[1]   = formInfo.morningGrateful2.value;
-    this.updatedMorningGrateful[2]   = formInfo.morningGrateful3.value;
-    this.updatedMorningTasks         = formInfo.morningTasks.value;
+    this.updatedMorningGrateful[0]   = formInfo.morningGrateful0.value;
+    this.updatedMorningGrateful[1]   = formInfo.morningGrateful1.value;
+    this.updatedMorningGrateful[2]   = formInfo.morningGrateful2.value;
+    this.updatedMorningTasks[0]      = formInfo.morningTasks0.value;
+    this.updatedMorningTasks[1]      = formInfo.morningTasks1.value;
+    this.updatedMorningTasks[2]      = formInfo.morningTasks2.value;
     this.updatedMorningPhotoUrl      = formInfo.morningPhotoUrl.value;
     this.updatedMorningWord          = formInfo.morningWord.value
     this.sendUpdatesToApi(id)

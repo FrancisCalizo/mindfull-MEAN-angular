@@ -9,7 +9,7 @@
       <div class="form-group">
           <label class="col-sm-1">grateful 1</label>
           <div class="col-sm-11">
-              <textarea name="morningGrateful1" [(ngModel)]="entry.grateful[0]" autosize class="form-control"  rows="1"></textarea>
+              <textarea name="morningGrateful0" [(ngModel)]="entry.grateful[0]" autosize class="form-control"  rows="1"></textarea>
           </div>
       </div>
   </fieldset>
@@ -17,7 +17,7 @@
       <div class="form-group">
           <label class="col-sm-1">grateful 2</label>
           <div class="col-sm-11">
-              <textarea name="morningGrateful2" [(ngModel)]="entry.grateful[1]" autosize class="form-control"  rows="1"></textarea>
+              <textarea name="morningGrateful1" [(ngModel)]="entry.grateful[1]" autosize class="form-control"  rows="1"></textarea>
           </div>
       </div>
   </fieldset>
@@ -25,14 +25,39 @@
       <div class="form-group">
           <label class="col-sm-1">grateful 3</label>
           <div class="col-sm-11">
-              <textarea name="morningGrateful3" [(ngModel)]="entry.grateful[2]" autosize class="form-control"  rows="1"></textarea>
+              <textarea name="morningGrateful2" [(ngModel)]="entry.grateful[2]" autosize class="form-control"  rows="1"></textarea>
           </div>
       </div>
   </fieldset>
   <br>
 
-  <label for="morningfull-tasks"> tasks </label>
-  <input id="morningfull-tasks" type="text"  [(ngModel)]="entry.tasks" name="morningTasks" value="{{ entry.tasks }}">
+  <!-- <label for="morningfull-tasks"> tasks </label>
+  <input id="morningfull-tasks" type="text"  [(ngModel)]="entry.tasks" name="morningTasks" value="{{ entry.tasks }}"> -->
+
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">Tasks 1</label>
+          <div class="col-sm-11">
+              <textarea name="morningTasks0" [(ngModel)]="entry.tasks[0]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">Tasks 2</label>
+          <div class="col-sm-11">
+              <textarea name="morningTasks1" [(ngModel)]="entry.tasks[1]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
+  <fieldset>
+      <div class="form-group">
+          <label class="col-sm-1">Tasks 3</label>
+          <div class="col-sm-11">
+              <textarea name="morningTasks2" [(ngModel)]="entry.tasks[2]" autosize class="form-control"  rows="1"></textarea>
+          </div>
+      </div>
+  </fieldset>
   <br>
 
   <label for="morningfull-photoUrl"> Photo URL </label>

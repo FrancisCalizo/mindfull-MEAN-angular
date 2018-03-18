@@ -24,7 +24,7 @@ export class EveningfullEditComponent implements OnInit {
   updatedEveningLearn            : Array<String>  = [];
   updatedEveningDifferent        : String = '';
   updatedEveningRating           : Number = null;
-  updatedEveningPhotoPath        : String = '';
+  updatedEveningImage        : String = '';
   updatedEveningWord             : String = '';
 
   constructor(
@@ -72,7 +72,7 @@ export class EveningfullEditComponent implements OnInit {
     this.updatedEveningLearn[2]             = formInfo.eveningLearn2.value;
     this.updatedEveningDifferent            = formInfo.eveningDifferent.value;
     this.updatedEveningRating               = formInfo.eveningRating.value;
-    this.updatedEveningPhotoPath            = formInfo.eveningPhotoPath.value;
+    this.updatedEveningImage            = formInfo.eveningImage.value;
     this.updatedEveningWord                 = formInfo.eveningWord.value
     this.sendUpdatesToApi(id)
   }
@@ -83,7 +83,7 @@ export class EveningfullEditComponent implements OnInit {
         eveningLearn           : this.updatedEveningLearn,
         eveningDifferent       : this.updatedEveningDifferent,
         eveningRating          : this.updatedEveningRating,
-        eveningPhotoPath       : this.updatedEveningPhotoPath,
+        eveningImage       : this.updatedEveningImage,
         eveningWord            : this.updatedEveningWord
     }
     this.myDashboardService.updateEvening(id, this.updatedEvening)

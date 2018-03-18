@@ -18,7 +18,7 @@ export class NewEveningfullComponent implements OnInit {
     eveningLearn           : [],
     eveningDifferent       : "",
     eveningRating          : null,
-    eveningPhotoPath       : "",
+    eveningImage           : "",
     eveningWord            : ""
   }
 
@@ -53,7 +53,7 @@ export class NewEveningfullComponent implements OnInit {
           eveningLearn           : [],
           eveningDifferent       : "",
           eveningRating          : null,
-          eveningPhotoPath       : "",
+          eveningImage           : "",
           eveningWord            : ""
         }
         this.saveError = '';

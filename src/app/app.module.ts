@@ -22,6 +22,9 @@ import { NewEveningfullComponent } from './new-eveningfull/new-eveningfull.compo
 import { MorningfullEditComponent } from './morningfull-edit/morningfull-edit.component';
 import { EveningfullEditComponent } from './eveningfull-edit/eveningfull-edit.component';
 
+// For Image Upload
+import { FileUploadModule } from "ng2-file-upload";
+
 
 
 @NgModule({
@@ -41,7 +44,8 @@ import { EveningfullEditComponent } from './eveningfull-edit/eveningfull-edit.co
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    FileUploadModule
   ],
   providers: [
     AuthService,

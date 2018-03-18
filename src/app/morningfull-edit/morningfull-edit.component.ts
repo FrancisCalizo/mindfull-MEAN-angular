@@ -12,7 +12,10 @@ import { environment } from "../../environments/environment";
 })
 export class MorningfullEditComponent implements OnInit {
 
-  entry = <any>{}
+  entry = <any>{
+    // Must define these in order for ngModel to work
+    grateful: ['', '', '']; 
+  }
 
   baseUrl = environment.apiBase;
   
@@ -63,9 +66,9 @@ export class MorningfullEditComponent implements OnInit {
     this.updatedMorningGrateful[0]   = formInfo.morningGrateful1.value;
     this.updatedMorningGrateful[1]   = formInfo.morningGrateful2.value;
     this.updatedMorningGrateful[2]   = formInfo.morningGrateful3.value;
-    this.updatedMorningTasks      = formInfo.morningTasks.value;
-    this.updatedMorningPhotoUrl   = formInfo.morningPhotoUrl.value;
-    this.updatedMorningWord       = formInfo.morningWord.value
+    this.updatedMorningTasks         = formInfo.morningTasks.value;
+    this.updatedMorningPhotoUrl      = formInfo.morningPhotoUrl.value;
+    this.updatedMorningWord          = formInfo.morningWord.value
     this.sendUpdatesToApi(id)
   }
   

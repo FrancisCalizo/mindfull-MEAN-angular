@@ -13,15 +13,15 @@ import { environment } from "../../environments/environment";
 export class EveningfullEditComponent implements OnInit {
 
   entry = <any> {
-    accomplishments : ['', '', ''];
-    learn : ['', '', ''];
+    accomplishments : ['', '', ''],
+    learn : ['', '', '']
   }
 
   baseUrl = environment.apiBase;
   
   updatedEvening                 : Object = {};
-  updatedEveningAccomplishments  : Array  = [];
-  updatedEveningLearn            : Array  = [];
+  updatedEveningAccomplishments  : Array<String>  = [];
+  updatedEveningLearn            : Array<String>  = [];
   updatedEveningDifferent        : String = '';
   updatedEveningRating           : Number = null;
   updatedEveningPhotoPath        : String = '';
@@ -78,15 +78,15 @@ export class EveningfullEditComponent implements OnInit {
   }
 
   sendUpdatesToApi(id){
-    this.updatedEveningfull = {
+    this.updatedEvening = {
         eveningAccomplishments : this.updatedEveningAccomplishments,
         eveningLearn           : this.updatedEveningLearn,
-        eveningDifferent       : this.updatedEveningDifferent
-        eveningRating          : this.updatedEveningRating
-        eveningPhotoPath       : this.updatedEveningPhotoPath
+        eveningDifferent       : this.updatedEveningDifferent,
+        eveningRating          : this.updatedEveningRating,
+        eveningPhotoPath       : this.updatedEveningPhotoPath,
         eveningWord            : this.updatedEveningWord
     }
-    this.myDashboardService.updateEvening(id, this.updatedEveningfull)
+    this.myDashboardService.updateEvening(id, this.updatedEvening)
     .toPromise()
     .then( res=>{
       this.myRouter.navigate(['/dashboard'])

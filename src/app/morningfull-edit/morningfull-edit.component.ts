@@ -14,15 +14,15 @@ export class MorningfullEditComponent implements OnInit {
 
   entry = <any>{
     // Must define these in order for ngModel to work
-    grateful : ['', '', '']; 
-    tasks    : ['', '', ''];
+    grateful : ['', '', ''],
+    tasks    : ['', '', '']
   }
 
   baseUrl = environment.apiBase;
   
   updatedMorning          : Object = {};
-  updatedMorningGrateful  : Array = ['', '', ''];
-  updatedMorningTasks     : Array = ['', '', ''];
+  updatedMorningGrateful  : Array<String> = ['', '', ''];
+  updatedMorningTasks     : Array<String> = ['', '', ''];
   updatedMorningPhotoUrl  : String = '';
   updatedMorningWord      : String = '';
 
@@ -76,13 +76,13 @@ export class MorningfullEditComponent implements OnInit {
   }
   
   sendUpdatesToApi(id){
-    this.updatedMorningfull = {
+    this.updatedMorning = {
         morningGrateful : this.updatedMorningGrateful,
         morningTasks     : this.updatedMorningTasks,
-        morningPhotoUrl  : this.updatedMorningPhotoUrl
+        morningPhotoUrl  : this.updatedMorningPhotoUrl,
         morningWord      : this.updatedMorningWord
       }
-      this.myDashboardService.updateMorning(id, this.updatedMorningfull)
+      this.myDashboardService.updateMorning(id, this.updatedMorning)
       .toPromise()
       .then( res=>{
         this.myRouter.navigate(['/dashboard'])

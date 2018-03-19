@@ -21,6 +21,7 @@ import { NewMorningfullComponent } from './new-morningfull/new-morningfull.compo
 import { NewEveningfullComponent } from './new-eveningfull/new-eveningfull.component';
 import { MorningfullEditComponent } from './morningfull-edit/morningfull-edit.component';
 import { EveningfullEditComponent } from './eveningfull-edit/eveningfull-edit.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 // For Image Upload
 import { FileUploadModule } from "ng2-file-upload";
@@ -39,6 +40,7 @@ import { FileUploadModule } from "ng2-file-upload";
     NewEveningfullComponent,
     MorningfullEditComponent,
     EveningfullEditComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,

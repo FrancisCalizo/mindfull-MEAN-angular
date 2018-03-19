@@ -10,11 +10,14 @@ import { NewMorningfullComponent } from "./new-morningfull/new-morningfull.compo
 import { NewEveningfullComponent } from "./new-eveningfull/new-eveningfull.component";
 import { MorningfullEditComponent } from './morningfull-edit/morningfull-edit.component';
 import { EveningfullEditComponent } from './eveningfull-edit/eveningfull-edit.component';
-
+import { HomepageComponent } from './homepage/homepage.component';
 
 const routes: Routes = [
   // Make sure no leading dash
-  // WILL NEED A HOMEPAGE COMPONENT EVENTUALLY
+  {
+    path: '',      
+    component: HomepageComponent
+  },
   {
     path: 'signup',      
     component: SignupComponent

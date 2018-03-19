@@ -51,26 +51,34 @@ export class NewEveningfullComponent implements OnInit {
     });
   }
 
-  // saveEveningfull(){
-  //   this.myDashboardService.createNewEvening(this.eveningData)
-  //     .then( res => {
-  //       // This clear the new phone after saving
-  //       this.eveningData = { 
-  //         eveningDate            : "",
-  //         eveningAccomplishments : [],
-  //         eveningLearn           : [],
-  //         eveningDifferent       : "",
-  //         eveningRating          : null,
-  //         // eveningImage           : "",
-  //         eveningWord            : ""
-  //       }
-  //       this.saveError = '';
-  //       this.myRouter.navigate(['/dashboard'])
-  // })
-  // .catch( err => { this.saveError = "Something is wrong with saving"})
-  // }
+  saveEveningfull() {
+    if (this.myCoolUploader.getNotUploadedItems().length === 0) {
+      this.saveEveningfullNoImage();
+    } else {
+      this.saveEveningfullWithImage();
+    }
+  }
 
-  saveEveningfull(){
+  saveEveningfullNoImage(){
+    this.myDashboardService.createNewEvening(this.eveningData)
+      .then( res => {
+        // This clear the new phone after saving
+        this.eveningData = { 
+          eveningDate            : "",
+          eveningAccomplishments : [],
+          eveningLearn           : [],
+          eveningDifferent       : "",
+          eveningRating          : null,
+          // eveningImage           : "",
+          eveningWord            : ""
+        }
+        this.saveError = '';
+        this.myRouter.navigate(['/dashboard'])
+  })
+  .catch( err => { this.saveError = "Something is wrong with saving"})
+  }
+
+  saveEveningfullWithImage(){
     this.myCoolUploader.onBuildItemForm = (item, form) => {
       form.append('eveningDate',            this.eveningData.eveningDate);
       form.append("eveningAccomplishments", this.eveningData.eveningAccomplishments);

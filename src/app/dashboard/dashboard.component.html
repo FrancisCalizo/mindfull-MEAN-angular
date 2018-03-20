@@ -64,15 +64,28 @@
       -->
               <div class="logo">
                   <h3 class="simple-text">
-                        {{ currentUser.username }}
+                        {{ currentUser.username }}'s <br>
+                         Dashboard 
                   </h3>
               </div>
               <div class="sidebar-wrapper">
                   <ul class="nav">
+                      <li class="active add-new">
+                          <a [routerLink]="['/dashboard/newmorningfull']">
+                            <i class="material-icons">settings_power</i>
+                            <p>New MorningFull</p>
+                        </a>  
+                      </li>
+                      <li class="active add-new">
+                        <a [routerLink]="['/dashboard/neweveningfull']">
+                            <i class="material-icons">settings_power</i>
+                            <p>New EveningFull</p>
+                        </a>    
+                      </li>
                       <li class="active logout-btn-li">
                           <a class ="logout-btn" href="#" (click)="logMeOut()">
                               <i class="material-icons">settings_power</i>
-                              <p class="logout">Log Me Out!</p>
+                              <p class="logout">Log Out!</p>
                           </a>
                       </li>
                   </ul>
@@ -84,12 +97,7 @@
               <nav class="navbar navbar-transparent navbar-absolute">
                   <div class="container-fluid">
                       <div class="navbar-header">
-                          <button type="button" class="navbar-toggle" data-toggle="collapse">
-                              <span class="sr-only">Toggle navigation</span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                          </button>
+
                           <h4 class="welcome">Welcome to the Dashboard! </h4>
                       </div>
               </div>
@@ -130,36 +138,37 @@
             </div>
           </div>  
         </div> -->
-
           <div class="content">
               <div class="container-fluid">
                   <div class="row">
 
-                      <div class="col-md-6">
+                      <div *ngFor="let entry of entries?.morningEntries" class="col-md-6">
                           <div class="card text-center">
-                              <div class="card-header card-chart" data-background-color="orange">
-                                  <div class="ct-chart" id=""></div>
+                              <div class="card-header" data-background-color="orange">
+                                 {{ entry.grateful}}
                               </div>
                               <div class="card-content">
-                                  <h4 class="title">Email Subscriptions</h4>
+                                  <h4 class="title one-word"> {{ entry.word }}</h4>
                                   <p class="category">Last Campaign Performance</p>
+                                  <a [routerLink]="['/dashboard/morningfull', entry._id]"> VIEW THIS MORNING ENTRY </a>
                               </div>
                               <div class="card-footer">
                                   <div class="stats">
-                                      <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                      <i class="material-icons">access_time</i> {{ entry.date }} 
                                   </div>
                               </div>
                           </div>
                       </div>
 
-                      <div class="col-md-6">
+                      <div *ngFor="let entry of entries?.eveningEntries" class="col-md-6">
                           <div class="card text-center">
-                              <div class="card-header card-chart" data-background-color="red">
-                                  <div class="ct-chart" id="completedTasksChart"></div>
+                              <div class="card-header" data-background-color="red">
+                                  {{entry.accomplishments}}
                               </div>
                               <div class="card-content">
-                                  <h4 class="title">Completed Tasks</h4>
+                                  <h4 class="title one-word"> {{ entry.word }}</h4>
                                   <p class="category">Last Campaign Performance</p>
+                                  <a [routerLink]="['/dashboard/eveningfull', entry._id]"> View this EVENING ENTRY </a>
                               </div>
                               <div class="card-footer">
                                   <div class="stats">
@@ -170,83 +179,10 @@
                       </div>
 
                   </div>
-              </div>
-              
-              <div class="container-fluid">
-                    <div class="row">
-  
-                        <div class="col-md-6">
-                            <div class="card text-center">
-                                <div class="card-header card-chart" data-background-color="orange">
-                                    <div class="ct-chart" id=""></div>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="title">Email Subscriptions</h4>
-                                    <p class="category">Last Campaign Performance</p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-  
-                        <div class="col-md-6">
-                            <div class="card text-center">
-                                <div class="card-header card-chart" data-background-color="red">
-                                    <div class="ct-chart" id="completedTasksChart"></div>
-                                </div>
-                                <div class="card-content">
-                                    <h4 class="title">Completed Tasks</h4>
-                                    <p class="category">Last Campaign Performance</p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <hr>
 
-                        <div class="col-md-6">
-                                <div class="card text-center">
-                                    <div class="card-header card-chart" data-background-color="orange">
-                                        <div class="ct-chart" id=""></div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4 class="title">Email Subscriptions</h4>
-                                        <p class="category">Last Campaign Performance</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="stats">
-                                            <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-      
-                            <div class="col-md-6">
-                                <div class="card text-center">
-                                    <div class="card-header card-chart" data-background-color="red">
-                                        <div class="ct-chart" id="completedTasksChart"></div>
-                                    </div>
-                                    <div class="card-content">
-                                        <h4 class="title">Completed Tasks</h4>
-                                        <p class="category">Last Campaign Performance</p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="stats">
-                                            <i class="material-icons">access_time</i> campaign sent 2 days ago
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                        
-  
-                    </div>
-                </div>             
-        </div>
-
+              </div>          
+            </div>
           </div>
       </div>
 

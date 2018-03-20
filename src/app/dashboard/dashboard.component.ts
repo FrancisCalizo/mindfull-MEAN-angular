@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 import { AuthService } from "../services/auth.service";
 import { DashboardService } from "../services/dashboard.service";
 import { environment } from "../../environments/environment";
@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
     private myAuthService: AuthService,
     private myRouter: Router,
     private myDashboardService: DashboardService
-  ) {}
+    ) {}
 
   ngOnInit() {
     this.myAuthService
@@ -38,6 +38,8 @@ export class DashboardComponent implements OnInit {
       });
     // this.getEntries();
   }
+
+
 
   getEntries() {
     this.myDashboardService.retrieveEntries()

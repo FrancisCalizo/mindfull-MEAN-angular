@@ -2,20 +2,7 @@ h1{
   text-align: center;
 }
 
-.morning-entries, .evening-entries{
-  width: 40%;
-  float: left;
-  text-align: center;
-  padding: 50px;
-}
 
-.morning-entries ul, .evening-entries ul{
-  list-style-type: none;
-}
-
-.single-entry{
-  border: 1px solid black;
-} 
 
 /* Title Nav Starts Here */
 .title{
@@ -23,10 +10,28 @@ h1{
 }
 
 /* Sidebar Area */
+
 .sidebar{
   background-image: url("../../assets/img/wood.jpg");
+  border: 2px solid black;
 }
 
-.logout-btn-li{
+.logout-btn-li, .add-new{
   width: 100%;
-}  
+}
+
+.active a{
+  border: 1px solid white;
+}
+
+/* Entries Start Here */
+
+
+.one-word{
+  font-family: 'Pacifico', cursive;
+}
+
+.card-footer{
+  background-color: rgba(240, 240, 240, 1);
+}
+

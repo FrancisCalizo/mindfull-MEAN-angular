@@ -1,4 +1,4 @@
-h1{
+/* h1{
   text-align: center;
 }
 
@@ -15,4 +15,19 @@ h1{
 
 .single-entry{
   border: 1px solid black;
+} */
+
+/* Title Nav Starts Here */
+.title{
+  font-size: 32px;
+}
+
+/* Sidebar Area */
+
+.sidebar{
+  background-image: url("../../assets/img/wood.jpg");
+}
+
+.logout-btn-li{
+  width: 100%;
 }

@@ -85,7 +85,7 @@ export class NewEveningfullComponent implements OnInit {
       form.append("eveningLearn",           this.eveningData.eveningLearn);
       form.append("eveningDifferent",       this.eveningData.eveningDifferent);
       form.append("eveningRating",          this.eveningData.eveningRating);
-      form.append("eveningWord",            this.eveningData.eveningRating);
+      form.append("eveningWord",            this.eveningData.eveningWord);
 
     }
     this.myCoolUploader.onSuccessItem = (item, response) =>{

@@ -1,0 +1,13 @@
+.card{
+  width: 65%;
+  margin: 25px auto;
+}
+
+textarea{
+  resize: none;
+  margin-bottom: 20px;
+}
+
+.date{
+  width: 200px;
+}

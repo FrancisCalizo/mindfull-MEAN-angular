@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
   entryListError: string;
   entries: Object[];
   currentUser: Object = {};
+  photo: string = 'https://llandscapes-ee1.kxcdn.com/wp-content/uploads/2015/01/6198521760_aa86027669_z.jpg';
 
   constructor(
     private myAuthService: AuthService,

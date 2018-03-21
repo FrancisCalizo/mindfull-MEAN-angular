@@ -1,0 +1,118 @@
+.daBody{
+  margin: 0;
+  padding: 0;
+  background-image: url('../../assets/img/writeblock.jpg');
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  z-index: -10;
+}
+
+.clearer { clear: both; }
+
+
+#overlay{
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  margin: 0;
+  padding: 0;
+  z-index: -5;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.loginbox{
+  width: 320px;
+  height: 360px;
+  color: #000;
+  background-color: rgba(255,255,255,0.7);
+  top: 50%;
+  left: 50%;
+  padding: 60px 30px;
+  position: absolute;
+  transform: translate(-50%,  -50%);
+  box-sizing: border-box;
+  border-radius: 3%;
+  box-shadow: 8px 8px 50px #000;
+}
+
+h1{
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0 0 0px;
+  text-align: center;
+  font-size: 33px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+}
+
+.loginbox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.loginbox input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #bdc3c7;
+  border-radius: 50px;
+  /* background: transparent; */
+  padding-left: 10px;
+  outline: none;
+  height: 30px;
+  font-size: 16px;
+  opacity: 1;
+  color: #000;
+}
+
+
+.loginbox input[type="submit"]{
+  border: 1px solid gainsboro;
+  outline: none;
+  height: 40px;
+  background: #2ecc71;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.loginbox input[type="submit"]:hover {
+  cursor: pointer;
+  background: #27ae60;
+  color: #000;
+  
+}
+
+.loginbox a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  opacity: 0.8;
+}
+
+.loginbox a:hover {
+  color: #F00;
+  opacity: 1;
+}
+
+#text-account {
+  font-size: 13px;
+  color: black;
+  opacity: 0.8;
+
+}
+
+#create-account:hover {
+  font-size: 16px;
+  text-decoration: underline;
+  font-weight: bold;
+}

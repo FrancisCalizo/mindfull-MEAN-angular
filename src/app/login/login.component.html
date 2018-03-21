@@ -1,18 +1,19 @@
-<h3> Log In </h3>
+<div id="overlay" class="daBody">
+  <div class="loginbox">
+      <div class="clearer"></div>
 
-<p *ngIf="loginErrorMessage" class="error">
-  {{ loginErrorMessage }}
-</p>
-
-<form (ngSubmit)="doLogin()">
-  <label for="login-username-input"> Username </label>
-  <input id="login-username-input" type="text" placeholder="blah" [(ngModel)]="loginInfo.username" name="loginUsername">
-  <br>
-
-  <label for="login-pass-input"> Password </label>
-  <input id="login-pass-input" type="password" placeholder="*****" [(ngModel)]="loginInfo.password" name="loginPassword">
-  <br>
-
-  <button> Log In </button>
-</form>
-<p>Don't have account? <a [routerLink]="['/signup']">Sign Up</a></p>
+      <h1>Sign in</h1><br>
+      <form (ngSubmit)="doLogin()">
+          <label for="login-username-input"></label>
+          <input id="login-username-input" type="text" placeholder="Username" [(ngModel)]="loginInfo.username" name="loginUsername">
+          <br>
+          <label for="login-pass-input"></label>
+          <input id="login-pass-input" type="password" placeholder="Password" [(ngModel)]="loginInfo.password" name="loginPassword">
+          <br>
+          <input type="submit" value="LOGIN">
+        </form>
+        <div class="no-account">
+          <span id="text-account">Don't have an account?</span><a id="create-account" [routerLink] = "['/signup']"> Signup here!</a>
+        </div>
+  </div> 
+</div>

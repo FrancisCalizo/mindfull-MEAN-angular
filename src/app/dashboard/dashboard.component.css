@@ -2,7 +2,9 @@ h1{
   text-align: center;
 }
 
-
+p,{
+  font-family: 'Open Sans', sans-serif; 
+}
 
 /* Title Nav Starts Here */
 .title{
@@ -10,6 +12,10 @@ h1{
 }
 
 /* Sidebar Area */
+
+.content{
+  background-color: bisque;
+}
 
 .sidebar{
   background-image: url("../../assets/img/wood.jpg");
@@ -21,17 +27,28 @@ h1{
 }
 
 .active a{
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 /* Entries Start Here */
+.card-content{
+  border: 1px solid rgba(0, 0, 0, 0.1)
+}
 
+.card-header a{
+  font-size: 1.2rem;
+}
 
 .one-word{
   font-family: 'Pacifico', cursive;
+  font-size: 3em;
 }
 
 .card-footer{
-  background-color: rgba(240, 240, 240, 1);
+  /* background-color: rgba(240, 240, 240, 3); */
+  background-image: url("../../assets/img/wood.jpg");
 }
 
+.foot-date {
+  color: black;
+}

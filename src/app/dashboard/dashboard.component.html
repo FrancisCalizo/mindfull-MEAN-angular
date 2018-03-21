@@ -1,43 +1,3 @@
-<!-- <h1>
-  Hey {{ currentUser.username }}, Welcome to the Dashboard!
-  <button (click)="logMeOut()">Log Out</button>  
-</h1>
-
-<div>
-  <div class="morning-entries">
-    <h2>ALL MORNING ENTRIES DISPLAYED HERE</h2>
-    <h2>
-      <a [routerLink]="['/dashboard/newmorningfull']">Add a new MORNING ENTRY</a>
-    </h2>
-    <div *ngFor="let entry of entries?.morningEntries" class="single-entry">
-      <a [routerLink]="['/dashboard/morningfull', entry._id]"> VIEW THIS MORNING ENTRY </a>
-      <ul>
-        <li> {{ entry.date }} </li>
-        <li> {{ entry.grateful }} </li>
-        <li> {{ entry.tasks }} </li>
-        <li> {{ entry.word }} </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="evening-entries">
-    <h2>ALL EVENING ENTRIES DISPLAYED HERE</h2>
-    <h2>
-      <a [routerLink]="['/dashboard/neweveningfull']">Add a new EVENING ENTRY</a>
-    </h2>
-    <div *ngFor="let entry of entries?.eveningEntries" class="single-entry">
-      <a [routerLink]="['/dashboard/eveningfull', entry._id]"> View this EVENING ENTRY </a>
-      <ul>
-        <li>{{ entry.date }}</li>
-        <li> {{ entry.accomplishments }} </li>
-        <li> {{ entry.different }} </li>
-        <li> {{ entry.learn }}  </li>
-        <li> {{ entry.word }} </li>
-      </ul>
-    </div>
-  </div>  
-</div> -->
-
 <!DOCTYPE html>
  <html class="no-js">
   <head>
@@ -56,7 +16,7 @@
       <!-- =======================Side Bar Begins Here ====================== -->
       <div class="wrapper">
 
-          <div class="sidebar" data-color="orange">
+          <div class="sidebar" data-color="red">
               <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
   
@@ -72,13 +32,13 @@
                   <ul class="nav">
                       <li class="active add-new">
                           <a [routerLink]="['/dashboard/newmorningfull']">
-                            <i class="material-icons">settings_power</i>
+                            <i class="material-icons">brightness_5</i>
                             <p>New MorningFull</p>
                         </a>  
                       </li>
                       <li class="active add-new">
                         <a [routerLink]="['/dashboard/neweveningfull']">
-                            <i class="material-icons">settings_power</i>
+                            <i class="material-icons">brightness_2</i>
                             <p>New EveningFull</p>
                         </a>    
                       </li>
@@ -144,17 +104,17 @@
 
                       <div *ngFor="let entry of entries?.morningEntries" class="col-md-6">
                           <div class="card text-center">
-                              <div class="card-header" data-background-color="orange">
-                                 {{ entry.grateful}}
+                              <div class="card-header" data-background-color="green">
+                                <a [routerLink]="['/dashboard/morningfull', entry._id]"> VIEW THIS MORNINGFULL </a>
                               </div>
                               <div class="card-content">
                                   <h4 class="title one-word"> {{ entry.word }}</h4>
-                                  <p class="category">Last Campaign Performance</p>
-                                  <a [routerLink]="['/dashboard/morningfull', entry._id]"> VIEW THIS MORNING ENTRY </a>
+                                  <p class="category">Click here for Modal Photo</p>
+                                  
                               </div>
                               <div class="card-footer">
                                   <div class="stats">
-                                      <i class="material-icons">access_time</i> {{ entry.date }} 
+                                      <span class="foot-date"><i class="material-icons">date_range</i> {{ entry.date }} </span>
                                   </div>
                               </div>
                           </div>
@@ -162,24 +122,22 @@
 
                       <div *ngFor="let entry of entries?.eveningEntries" class="col-md-6">
                           <div class="card text-center">
-                              <div class="card-header" data-background-color="red">
-                                  {{entry.accomplishments}}
-                              </div>
+                              <div class="card-header" data-background-color="blue">
+                                 <a [routerLink]="['/dashboard/eveningfull', entry._id]"> VIEW THIS EVENINGFULL </a>
+                                </div>
                               <div class="card-content">
                                   <h4 class="title one-word"> {{ entry.word }}</h4>
-                                  <p class="category">Last Campaign Performance</p>
-                                  <a [routerLink]="['/dashboard/eveningfull', entry._id]"> View this EVENING ENTRY </a>
+                                  <p class="category">Click here for Modal to Photo</p>
                               </div>
                               <div class="card-footer">
                                   <div class="stats">
-                                      <i class="material-icons">access_time</i> campaign sent 2 days ago
+                                      <span class="foot-date"><i class="material-icons">date_range</i> {{ entry.date }}</span>
                                   </div>
                               </div>
                           </div>
                       </div>
 
                   </div>
-                    <hr>
 
               </div>          
             </div>

@@ -123,17 +123,20 @@
                       </div>
 
                       <div *ngFor="let entry of entries?.eveningEntries" class="col-md-6">
-                          <div class="card text-center">
+                          <div [ngStyle]="{'background-image': 'url(' +baseUrl + entry.image +')',
+                          'box-shadow': 'inset 0 0 0 1000px rgba(255,255,255,.5)',
+                          'background-size': 'cover',
+                          'background-position': 'center'
+                           }" class="card text-center">
                             <a [routerLink]="['/dashboard/eveningfull', entry._id]">
                               <div class="card-header" data-background-color="blue">VIEW THIS EVENINGFULL </div>
                             </a>
                               <div class="card-content">
                                   <h4 class="title one-word"> {{ entry.word }}</h4>
-                                  <p class="category">Click here for Modal to Photo</p>
                               </div>
                               <div class="card-footer">
                                   <div class="stats">
-                                      <span class="foot-date"><i class="material-icons">date_range</i> {{ entry.date }}</span>
+                                      <span class="foot-date"><i class="material-icons calendar">date_range</i> {{ entry.date }} <i class="material-icons calendar">date_range</i></span>
                                   </div>
                               </div>
                           </div>

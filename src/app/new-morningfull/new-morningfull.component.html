@@ -1,74 +1,62 @@
-<h1>Add a new MORNINGFULL:</h1>
-<p *ngIf="saveError" class="error">
-  {{ saveError }}
-</p>
+<div class="card">
+    <div class="card-header">Featured</div>
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <form (ngSubmit)="saveMorningfull()">
 
-<form (ngSubmit)="saveMorningfull()">
-
-  <label for="morningfull-date"> MorningFull Date </label>
-  <input id="morningfull-date" type="text" placeholder="Date" [(ngModel)]="morningData.morningDate" name="morningDate">
-  <br>
-
-  <fieldset>      
-    <div class="form-group">
-        <label>Grateful 1</label>
-        <div>
-            <textarea name="morningGrateful" [(ngModel)]="morningData.morningGrateful[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>  
-        </div>
-    </div>
-    </fieldset>
-    <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1"> Grateful 2</label>
-          <div class="col-sm-11">
-              <textarea name="morningGrateful" [(ngModel)]="morningData.morningGrateful[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
-          </div>
-      </div>
-    </fieldset>
-    <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">Grateful 3</label>
-          <div class="col-sm-11">
-              <textarea name="morningGrateful" [(ngModel)]="morningData.morningGrateful[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset> 
-  <br>
-  <fieldset>      
-        <div class="form-group">
-            <label>Tasks 1</label>
-            <div>
-                <textarea name="morningTasks" [(ngModel)]="morningData.morningTasks[0]" autosize class="form-control" placeholder="Eat food " rows="1"></textarea>  
+        <fieldset>
+            <div class="form-group">
+                <label class="col-sm-11" for="morningfull-date"> MorningFull Date (required format)</label>
+                <div class="col-sm-11">
+                    <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="morningfull-date" type="text" placeholder="Date" [(ngModel)]="morningData.morningDate" name="morningDate">
+                </div>
             </div>
-        </div>
+        </fieldset>        
+        <fieldset>      
+            <div class="form-group">
+                <label class="col-sm-11">Grateful 1</label>
+                <div class="col-sm-11">
+                    <textarea name="morningGrateful" [(ngModel)]="morningData.morningGrateful[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>
+                    <textarea name="morningGrateful" [(ngModel)]="morningData.morningGrateful[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
+                    <textarea name="morningGrateful" [(ngModel)]="morningData.morningGrateful[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>      
+            <div class="form-group">
+                <label class="col-sm-11">Tasks</label>
+                <div class="col-sm-11">
+                    <textarea name="morningTasks" [(ngModel)]="morningData.morningTasks[0]" autosize class="form-control" placeholder="Eat food " rows="1"></textarea>  
+                    <textarea name="morningTasks" [(ngModel)]="morningData.morningTasks[1]" autosize class="form-control" placeholder="Get Swole" rows="1"></textarea>
+                    <textarea name="morningTasks" [(ngModel)]="morningData.morningTasks[2]" autosize class="form-control" placeholder="Get to werq" rows="1"></textarea>
+                </div>
+            </div>
         </fieldset>
         <fieldset>
-          <div class="form-group">
-              <label class="col-sm-1"> Tasks 2</label>
-              <div class="col-sm-11">
-                  <textarea name="morningTasks" [(ngModel)]="morningData.morningTasks[1]" autosize class="form-control" placeholder="Get Swole" rows="1"></textarea>
-              </div>
-          </div>
+            <div class="form-group">
+                <label class="col-sm-11"> MorningFull PhotoUrl </label>
+                <div class="col-sm-11">
+                    <textarea name="morningPhotoUrl" [(ngModel)]="morningData.morningPhotoUrl" autosize class="form-control" placeholder="Photo Url" rows="1"></textarea>
+                </div>
+            </div>
         </fieldset>
         <fieldset>
-          <div class="form-group">
-              <label class="col-sm-1">Tasks 3</label>
-              <div class="col-sm-11">
-                  <textarea name="morningTasks" [(ngModel)]="morningData.morningTasks[2]" autosize class="form-control" placeholder="Get to werq" rows="1"></textarea>
-              </div>
-          </div>
-        </fieldset> 
+            <div class="form-group">
+                <label class="col-sm-11"> MorningFull Word </label>
+                <div class="col-sm-11">
+                    <textarea name="morningWord" [(ngModel)]="morningData.morningWord" autosize class="form-control" placeholder="Morning Word" rows="1"></textarea>
+                </div>
+            </div>
+        </fieldset>
+        
+        <p *ngIf="saveError" class="error"> {{ saveError }}</p>
+        <button class="btn btn-success"> Save Morningfull </button>
+        </form>
 
-  <label for="morningfull-photoUrl"> MorningFull PhotoUrl </label>
-  <input id="morningfull-photoUrl" type="text" placeholder="Photo Url" [(ngModel)]="morningData.morningPhotoUrl" name="morningPhotoUrl">
-  <br>
+    </div>
+</div>
 
-  <label for="morningfull-word"> MorningFull word </label>
-  <input id="morningfull-word" type="text" placeholder="Morning Word" [(ngModel)]="morningData.morningWord" name="morningWord" required>
-  <br>
 
-  <button> Save Morningfull </button>
-</form>
 
   <!-- 
  <label for="morningfull-grateful"> MorningFull Grateful </label>

@@ -2,13 +2,24 @@ h1{
   text-align: center;
 }
 
-p,{
+p{
   font-family: 'Open Sans', sans-serif; 
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 /* Title Nav Starts Here */
-.title{
-  font-size: 32px;
+.top-title{
+  font-family: 'Pacifico', cursive;
+  font-size: 50px;
+  color: #000;
+  text-shadow: 2px 2px 6px gray;
+  text-decoration: underline;
+}
+.brain{ height: 10px;}
+
+.navbar, .navbar-header{
+  padding-bottom: 50px;
 }
 
 /* Sidebar Area */
@@ -27,7 +38,7 @@ p,{
 }
 
 .active a{
-  border: 2px solid white;
+  border: 1px solid black;
 }
 
 /* Entries Start Here */
@@ -45,7 +56,9 @@ p,{
 
 .one-word{
   font-family: 'Pacifico', cursive;
-  font-size: 3em;
+  font-size: 3.5em;
+  color: white;
+  text-shadow: 2px 2px 6px #000;
 }
 
 /* 
@@ -54,6 +67,11 @@ p,{
   background-image: url("../../assets/img/wood.jpg");
 }
 */
+
+.card-header:hover, {
+  box-shadow: 0 0 8px rgba(0,255,0, 0.6);
+
+}
 
 
 .foot-date{

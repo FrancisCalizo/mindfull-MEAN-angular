@@ -23,8 +23,11 @@ a:hover {
   color: #f05f40;
 }
 
-h1 {
+strong {
   font-family: 'Pacifico', cursive;
+  font-size: 1.8em;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .bg-primary {
@@ -175,7 +178,7 @@ header.masthead {
   height:100%;
   display: block;
   z-index:0;
-  background-color: rgba(40, 40, 40, 0.7);
+  background-color: rgba(40, 40, 40, 0.5);
   border-radius: 6px;
 }
 
@@ -225,13 +228,22 @@ header.masthead p {
 
 .btn {
   font-weight: 700;
+  color: white;
+  background-color: #F05F40;
+  text-shadow: 2px 2px 4px #000000;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid white;
   border-radius: 300px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif; 
+  box-shadow: 5px 10px 18px #888888;
 }
 
 .btn-xl {
-  padding: 1rem 2rem;
+  padding: 1.5rem 2.2rem;
+  margin: 0 10;
+}
+
+.brain{
+  height: 80px;
 }
 

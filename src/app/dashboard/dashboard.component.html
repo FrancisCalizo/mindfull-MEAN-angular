@@ -56,10 +56,9 @@
           <div class="main-panel">
               <nav class="navbar navbar-transparent navbar-absolute">
                   <div class="container-fluid">
-                      <div class="navbar-header">
-
-                          <h4 class="welcome">Welcome to the Dashboard! </h4>
-                      </div>
+                      <!-- <div class="navbar-header"> -->
+                          <h2 class="top-title">mindFull </h2>
+                      <!-- </div> -->
               </div>
           </nav>
 
@@ -109,14 +108,14 @@
                           'background-position': 'center'
                            }" class="card text-center">
                             <a [routerLink]="['/dashboard/morningfull', entry._id]"> 
-                              <div class="card-header" data-background-color="green">VIEW THIS MORNINGFULL </div>
+                              <div class="card-header morning-view" data-background-color="green">VIEW THIS MORNINGFULL </div>
                             </a>
                               <div class="card-content">
                                   <h4 class="title one-word"> {{ entry.word }}</h4>                                  
                               </div>
                               <div class="card-footer">
                                   <div class="stats">
-                                      <span class="foot-date"><i class="material-icons">date_range</i> {{ entry.date }} </span>
+                                      <span class="foot-date"><i class="material-icons">date_range</i> {{ entry.date | date: "mediumDate" }} <i class="material-icons calendar">date_range</i></span>
                                   </div>
                               </div>
                           </div>
@@ -136,7 +135,7 @@
                               </div>
                               <div class="card-footer">
                                   <div class="stats">
-                                      <span class="foot-date"><i class="material-icons calendar">date_range</i> {{ entry.date }} <i class="material-icons calendar">date_range</i></span>
+                                      <span class="foot-date"><i class="material-icons calendar">date_range</i> {{ entry.date | date: "mediumDate" }} <i class="material-icons calendar">date_range</i></span>
                                   </div>
                               </div>
                           </div>

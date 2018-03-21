@@ -104,9 +104,9 @@
 
                       <div *ngFor="let entry of entries?.morningEntries" class="col-md-6">
                           <div class="card text-center">
-                              <div class="card-header" data-background-color="green">
-                                <a [routerLink]="['/dashboard/morningfull', entry._id]"> VIEW THIS MORNINGFULL </a>
-                              </div>
+                            <a [routerLink]="['/dashboard/morningfull', entry._id]"> 
+                              <div class="card-header" data-background-color="green">VIEW THIS MORNINGFULL </div>
+                            </a>
                               <div class="card-content">
                                   <h4 class="title one-word"> {{ entry.word }}</h4>
                                   <p class="category">Click here for Modal Photo</p>
@@ -122,9 +122,9 @@
 
                       <div *ngFor="let entry of entries?.eveningEntries" class="col-md-6">
                           <div class="card text-center">
-                              <div class="card-header" data-background-color="blue">
-                                 <a [routerLink]="['/dashboard/eveningfull', entry._id]"> VIEW THIS EVENINGFULL </a>
-                                </div>
+                            <a [routerLink]="['/dashboard/eveningfull', entry._id]">
+                              <div class="card-header" data-background-color="blue">VIEW THIS EVENINGFULL </div>
+                            </a>
                               <div class="card-content">
                                   <h4 class="title one-word"> {{ entry.word }}</h4>
                                   <p class="category">Click here for Modal to Photo</p>

@@ -35,7 +35,7 @@ export class SignupComponent implements OnInit {
       })
       .catch(err => {
         const parsedError = err.json();
-        this.throwError = parsedError.message + " sad boiz"
+        this.throwError = parsedError.message;
       });
   } // Close doSignup()
 }

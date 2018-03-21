@@ -3,6 +3,9 @@
       <div class="clearer"></div>
 
       <h1>Sign in</h1><br>
+      <p *ngIf="loginErrorMessage" class="error">
+          {{ loginErrorMessage }}
+      </p>
       <form (ngSubmit)="doLogin()">
           <label for="login-username-input"></label>
           <input id="login-username-input" type="text" placeholder="Username" [(ngModel)]="loginInfo.username" name="loginUsername">

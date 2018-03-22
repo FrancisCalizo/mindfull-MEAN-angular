@@ -87,3 +87,13 @@ p{
 .navbar{
   z-index: -1;
 }
+
+.icons{
+  width: 30px;
+  float: left;
+  margin-right: 3px;
+}
+
+.calendar{
+  width:  20px;
+}

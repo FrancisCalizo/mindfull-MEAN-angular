@@ -1,82 +1,3 @@
-<!-- <p>Update From</p>
-<form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
-
-
-
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">accomplishments 1</label>
-          <div class="col-sm-11">
-              <textarea name="eveningAccomplishments0" [(ngModel)]="entry.accomplishments[0]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">accomplishments 2</label>
-          <div class="col-sm-11">
-              <textarea name="eveningAccomplishments1" [(ngModel)]="entry.accomplishments[1]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">accomplishments 3</label>
-          <div class="col-sm-11">
-              <textarea name="eveningAccomplishments2" [(ngModel)]="entry.accomplishments[2]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <br>
-
-
-
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">learn 1</label>
-          <div class="col-sm-11">
-              <textarea name="eveningLearn0" [(ngModel)]="entry.learn[0]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">learn 2</label>
-          <div class="col-sm-11">
-              <textarea name="eveningLearn1" [(ngModel)]="entry.learn[1]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">learn 3</label>
-          <div class="col-sm-11">
-              <textarea name="eveningLearn2" [(ngModel)]="entry.learn[2]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <br>
-
-  <label for="eveningfull-different"> Different</label>
-  <input id="eveningfull-different" type="text"  [(ngModel)]="entry.different" name="eveningDifferent" value="{{ entry.different }}">
-  <br>
-
-  <label for="eveningfull-rating"> Rating </label>
-  <input id="eveningfull-rating" type="number"  [(ngModel)]="entry.rating" name="eveningRating" value="{{ entry.rating }}">
-  <br>
-
-  <label for="eveningfull-image"> image </label>
-  <input id="eveningfull-image" type="text"  [(ngModel)]="entry.image" name="eveningImage" value="{{ entry.image }}">
-  <br>
-
-  <label for="eveningfull-word"> Word </label>
-  <input id="eveningfull-word" type="text"  [(ngModel)]="entry.word" name="eveningWord" value="{{ entry.word }}">
-  <br>
-
-  <button type="submit">Save updates</button>
-</form> -->
-
-<!-- ======================================== --> 
 <div class="bg">
     <div class="container">
             <div class="card">
@@ -86,7 +7,8 @@
                         <img class ="brain" src="../../assets/img/logo.png" alt="">
                     </div>
                     <div class="card-body">
-                        <h3 class="card-title">My New Eveningfull:</h3>
+                        <h3 class="card-title">Edit Eveningfull of {{ entry.date | date: "mediumDate" }} </h3>
+                        <button class="btn-danger btn deleteEntry"(click)="deleteThisEvening()">Delete</button>
                         <hr>
                         <form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
                 
@@ -144,19 +66,32 @@
                             </div>
                         </fieldset> 
     
-                        <fieldset>
+                        <!-- <fieldset>
                             <div class="form-group">
                                 <label class="col-sm-6"> Picture Upload</label>
                                 <div class="col-sm-11">
-                                    <input type="file" class="form-control" name="image" [(ngModel)]="entry.image" ng2FileSelect [uploader]="myCoolUploader" value="{{ entry.image }}">
+                                    <input type="file" class="form-control" name="eveningImage" [(ngModel)]="entry.image" ng2FileSelect [uploader]="myCoolUploader" value="{{ entry.image }}">
                                 </div>
                             </div>
+                        </fieldset>  -->
+
+                        <fieldset>
+                                <div class="form-group">
+                                    <label class="col-sm-6"> Eveningfull Image</label>
+                                    <div class="col-sm-11">
+                                        <input type="text" class="form-control "  [(ngModel)]="entry.image" name="eveningImage" value="{{ entry.image }}">
+                                    </div>
+                                </div>
                         </fieldset> 
+                        <!-- 
+                        <label for="eveningfull-image"> image </label>
+                        <input id="eveningfull-image" type="text"  [(ngModel)]="entry.image" name="eveningImage" value="{{ entry.image }}">
+                        <br> -->
                         
                         <div class="buttons">
                             <p *ngIf="saveError" class="error"> {{ saveError }}</p>
                             <button class="btn btn-success col-sm-6"> Save </button>
-                            <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Discard</button>
+                            <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Back</button>
                         </div>
                         </form>
                 

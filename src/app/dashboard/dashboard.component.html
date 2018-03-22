@@ -64,39 +64,6 @@
 
           <!-- =======================Content  Begins Here ====================== -->
     
-
-       <!-- <div>
-          <div class="morning-entries">
-            <h2>ALL MORNING ENTRIES DISPLAYED HERE</h2>
-            <h2><a [routerLink]="['/dashboard/newmorningfull']">Add a new MORNING ENTRY</a></h2>
-            <div *ngFor="let entry of entries?.morningEntries" class="single-entry">
-              <a [routerLink]="['/dashboard/morningfull', entry._id]"> VIEW THIS MORNING ENTRY </a>
-              <ul>
-                <li> {{ entry.date }} </li>
-                <li> {{ entry.grateful }} </li>
-                <li> {{ entry.tasks }} </li>
-                <li> {{ entry.word }} </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="evening-entries">
-            <h2>ALL EVENING ENTRIES DISPLAYED HERE</h2>
-            <h2>
-              <a [routerLink]="['/dashboard/neweveningfull']">Add a new EVENING ENTRY</a>
-            </h2>
-            <div *ngFor="let entry of entries?.eveningEntries" class="single-entry">
-              <a [routerLink]="['/dashboard/eveningfull', entry._id]"> View this EVENING ENTRY </a>
-              <ul>
-                <li>{{ entry.date }}</li>
-                <li> {{ entry.accomplishments }} </li>
-                <li> {{ entry.different }} </li>
-                <li> {{ entry.learn }}  </li>
-                <li> {{ entry.word }} </li>
-              </ul>
-            </div>
-          </div>  
-        </div> -->
           <div class="content">
               <div class="container-fluid">
                   <div class="row">
@@ -107,7 +74,8 @@
                           'background-size': 'cover',
                           'background-position': 'center'
                            }" class="card text-center">
-                            <a [routerLink]="['/dashboard/morningfull', entry._id]"> 
+                            <!-- <a [routerLink]="['/dashboard/morningfull', entry._id]">  -->
+                            <a [routerLink]="['/dashboard/editmorningfull', entry._id]">
                               <div class="card-header morning-view" data-background-color="green">VIEW THIS MORNINGFULL </div>
                             </a>
                               <div class="card-content">
@@ -127,7 +95,7 @@
                           'background-size': 'cover',
                           'background-position': 'center'
                            }" class="card text-center">
-                            <a [routerLink]="['/dashboard/eveningfull', entry._id]">
+                            <a [routerLink]="['/dashboard/editeveningfull', entry._id]">
                               <div class="card-header" data-background-color="blue">VIEW THIS EVENINGFULL </div>
                             </a>
                               <div class="card-content">

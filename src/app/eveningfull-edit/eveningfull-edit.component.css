@@ -38,6 +38,11 @@ img{
   text-align: center;
 }
 
+.deleteEntry{
+  display: block;
+  margin: 0 auto;
+}
+
 .buttons{
   width: 250px;
   margin: 0 auto;

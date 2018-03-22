@@ -91,4 +91,17 @@ export class MorningfullEditComponent implements OnInit {
         console.log("Error in the update:", err)
       } )
   }
+
+  deleteThisMorning(){
+    if (!confirm("Are you sure?")) {
+      return;
+    }
+    this.myDashboardService.deleteMorning(this.entry._id)
+      .then( res => {
+        this.myRouter.navigate(['/dashboard'])
+      })
+      .catch( err => {
+        console.log("Error in deleting:", err)
+      })
+  } 
 }

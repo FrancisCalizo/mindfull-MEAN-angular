@@ -43,6 +43,11 @@ img{
   margin: 0 auto;
 }
 
+.deleteEntry{
+  display: block;
+  margin: 0 auto;
+}
+
 .card-title{
   font-family: 'Open Sans', sans-serif;
   color: white;

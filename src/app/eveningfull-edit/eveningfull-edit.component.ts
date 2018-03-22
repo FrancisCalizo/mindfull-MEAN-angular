@@ -19,6 +19,7 @@ export class EveningfullEditComponent implements OnInit {
 
   baseUrl = environment.apiBase;
   
+  saveError: any;
   updatedEvening                 : Object = {};
   updatedEveningAccomplishments  : Array<String>  = [];
   updatedEveningLearn            : Array<String>  = [];

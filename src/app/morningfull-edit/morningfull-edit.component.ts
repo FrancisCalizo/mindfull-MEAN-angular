@@ -25,7 +25,7 @@ export class MorningfullEditComponent implements OnInit {
   updatedMorningTasks     : Array<String> = ['', '', ''];
   updatedMorningPhotoUrl  : String = '';
   updatedMorningWord      : String = '';
-
+  saveError: any;
 
   constructor(    
     private myDashboardService: DashboardService,

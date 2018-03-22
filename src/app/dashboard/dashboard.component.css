@@ -79,3 +79,11 @@ p{
   font-size: 16px;
   font-weight: bold;
 }
+
+/* .router{
+  z-index: 6;
+} */
+
+.navbar{
+  z-index: -1;
+}

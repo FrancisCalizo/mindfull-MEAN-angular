@@ -12,8 +12,8 @@ import { environment } from "../../environments/environment";
 export class DashboardComponent implements OnInit {
   logoutError: string;
   entryListError: string;
-  entries: Object[];
-  currentUser: Object = {};
+  entries: any;
+  currentUser: any;
 
   baseUrl = environment.apiBase;
 

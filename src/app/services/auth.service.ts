@@ -6,6 +6,8 @@ import { environment } from "../../environments/environment"
 @Injectable()
 export class AuthService {
 
+apiBase: 'http://localhost:3000'
+
  constructor(private http: Http) { }
 
  signup(authStuff) {

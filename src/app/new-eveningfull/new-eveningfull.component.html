@@ -1,75 +1,87 @@
-<div class="card">
-        <div class="card-header">Featured</div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <form (ngSubmit)="saveEveningfull()">
-    
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-sm-11" for="eveningfull-date"> EveningFull Date (required format)</label>
-                    <div class="col-sm-11">
-                        <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="eveningData.eveningDate" name="eveningDate">
-                    </div>
+<div class="bg">
+    <div class="container">
+        <div class="card">
+                <div class="card-header col-sm-12">
+                    <img class ="brain" src="../../assets/img/logo.png" alt="">
+                    mindFull
+                    <img class ="brain" src="../../assets/img/logo.png" alt="">
                 </div>
-            </fieldset>        
-            <fieldset>      
-                <div class="form-group">
-                    <label class="col-sm-11">Accomplishments </label>
-                    <div class="col-sm-11">
-                        <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>
-                        <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
-                        <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset>      
-                <div class="form-group">
-                    <label class="col-sm-11">What did i learn</label>
-                    <div class="col-sm-11">
-                        <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[0]" autosize class="form-control" placeholder="Eat food " rows="1"></textarea>  
-                        <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[1]" autosize class="form-control" placeholder="Get Swole" rows="1"></textarea>
-                        <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[2]" autosize class="form-control" placeholder="Get to werq" rows="1"></textarea>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-sm-11"> Eveningfull Different  </label>
-                    <div class="col-sm-11">
-                        <textarea name="eveningDifferent" [(ngModel)]="eveningData.eveningDifferent" autosize class="form-control" placeholder="Photo Url" rows="1"></textarea>
-                    </div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-sm-11"> MorningFull Word </label>
-                    <div class="col-sm-11">
-                        <textarea name="eveningWord" [(ngModel)]="eveningData.eveningWord" autosize class="form-control" placeholder="evening Word" rows="1"></textarea>
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-sm-11"> Eveningfull Rating</label>
-                    <div class="col-sm-11">
-                        <input type="number" class="form-control date" placeholder="5" [(ngModel)]="eveningData.eveningRating" name="eveningRating">
-                    </div>
-                </div>
-            </fieldset> 
-
-            <fieldset>
-                <div class="form-group">
-                    <label class="col-sm-11"> Eveningfull Rating</label>
-                    <div class="col-sm-11">
-                        <input type="file" class="form-control" name="image" ng2FileSelect [uploader]="myCoolUploader" >
-                    </div>
-                </div>
-            </fieldset> 
+                <div class="card-body">
+                    <h3 class="card-title">My New Eveningfull:</h3>
+                    <hr>
+                    <form (ngSubmit)="saveEveningfull()">
             
-            <p *ngIf="saveError" class="error"> {{ saveError }}</p>
-            <button class="btn btn-success"> Save Eveningfull </button>
-            </form>
-    
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-sm-6" for="eveningfull-date"> EveningFull Date (required format)</label>
+                            <div class="col-sm-11">
+                                <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="eveningData.eveningDate" name="eveningDate">
+                            </div>
+                        </div>
+                    </fieldset>        
+                    <fieldset>      
+                        <div class="form-group">
+                            <label class="col-sm-6">Accomplishments </label>
+                            <div class="col-sm-11">
+                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>
+                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
+                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>      
+                        <div class="form-group">
+                            <label class="col-sm-6">What did i learn</label>
+                            <div class="col-sm-11">
+                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[0]" autosize class="form-control" placeholder="Eat food " rows="1"></textarea>  
+                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[1]" autosize class="form-control" placeholder="Get Swole" rows="1"></textarea>
+                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[2]" autosize class="form-control" placeholder="Get to werq" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-sm-6"> Eveningfull Different  </label>
+                            <div class="col-sm-11">
+                                <textarea name="eveningDifferent" [(ngModel)]="eveningData.eveningDifferent" autosize class="form-control" placeholder="Photo Url" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-sm-6"> MorningFull Word </label>
+                            <div class="col-sm-11">
+                                <textarea name="eveningWord" [(ngModel)]="eveningData.eveningWord" autosize class="form-control" placeholder="evening Word" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-sm-6"> Eveningfull Rating</label>
+                            <div class="col-sm-11">
+                                <input type="number" class="form-control date" placeholder="5" [(ngModel)]="eveningData.eveningRating" name="eveningRating">
+                            </div>
+                        </div>
+                    </fieldset> 
+
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-sm-6"> Picture Upload</label>
+                            <div class="col-sm-11">
+                                <input type="file" class="form-control" name="image" ng2FileSelect [uploader]="myCoolUploader" >
+                            </div>
+                        </div>
+                    </fieldset> 
+                    
+                    <div class="buttons">
+                        <p *ngIf="saveError" class="error"> {{ saveError }}</p>
+                        <button class="btn btn-success col-sm-6"> Save </button>
+                        <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Discard</button>
+                    </div>
+                    </form>
+            
+                </div>
         </div>
     </div>
+</div>

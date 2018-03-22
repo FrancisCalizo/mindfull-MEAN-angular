@@ -81,12 +81,15 @@ export class NewEveningfullComponent implements OnInit {
   saveEveningfullWithImage(){
     this.myCoolUploader.onBuildItemForm = (item, form) => {
       form.append('eveningDate',            this.eveningData.eveningDate);
-      form.append("eveningAccomplishments", this.eveningData.eveningAccomplishments);
-      form.append("eveningLearn",           this.eveningData.eveningLearn);
+      form.append("eveningAccomplishments", this.eveningData.eveningAccomplishments[0]);
+      form.append("eveningAccomplishments", this.eveningData.eveningAccomplishments[1]);
+      form.append("eveningAccomplishments", this.eveningData.eveningAccomplishments[2]);
+      form.append("eveningLearn",           this.eveningData.eveningLearn[0]);
+      form.append("eveningLearn",           this.eveningData.eveningLearn[1]);
+      form.append("eveningLearn",           this.eveningData.eveningLearn[2]);
       form.append("eveningDifferent",       this.eveningData.eveningDifferent);
       form.append("eveningRating",          this.eveningData.eveningRating);
       form.append("eveningWord",            this.eveningData.eveningWord);
-
     }
     this.myCoolUploader.onSuccessItem = (item, response) =>{
       this.eveningData = {

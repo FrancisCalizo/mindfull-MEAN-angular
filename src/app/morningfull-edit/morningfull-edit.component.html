@@ -1,74 +1,73 @@
-<p>Update From</p>
-<form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
-  <!--
-  <label for="morningfull-grateful"> Grateful </label>
-  <input id="morningfull-grateful" type="text"  [(ngModel)]="entry.grateful" name="morningGrateful" value="{{ entry.grateful }}">
-  -->
-  
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">grateful 1</label>
-          <div class="col-sm-11">
-              <textarea name="morningGrateful0" [(ngModel)]="entry.grateful[0]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">grateful 2</label>
-          <div class="col-sm-11">
-              <textarea name="morningGrateful1" [(ngModel)]="entry.grateful[1]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">grateful 3</label>
-          <div class="col-sm-11">
-              <textarea name="morningGrateful2" [(ngModel)]="entry.grateful[2]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <br>
-
-  <!-- <label for="morningfull-tasks"> tasks </label>
-  <input id="morningfull-tasks" type="text"  [(ngModel)]="entry.tasks" name="morningTasks" value="{{ entry.tasks }}"> -->
-
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">Tasks 1</label>
-          <div class="col-sm-11">
-              <textarea name="morningTasks0" [(ngModel)]="entry.tasks[0]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">Tasks 2</label>
-          <div class="col-sm-11">
-              <textarea name="morningTasks1" [(ngModel)]="entry.tasks[1]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <fieldset>
-      <div class="form-group">
-          <label class="col-sm-1">Tasks 3</label>
-          <div class="col-sm-11">
-              <textarea name="morningTasks2" [(ngModel)]="entry.tasks[2]" autosize class="form-control"  rows="1"></textarea>
-          </div>
-      </div>
-  </fieldset>
-  <br>
-
-  <label for="morningfull-photoUrl"> Photo URL </label>
-  <input id="morningfull-photoUrl" type="text"  [(ngModel)]="entry.photoUrl" name="morningPhotoUrl" value="{{ entry.photoUrl }}">
-  <br>
-
-  <label for="morningfull-photoUrl"> Word </label>
-  <input id="morningfull-photoUrl" type="text"  [(ngModel)]="entry.word" name="morningWord" value="{{ entry.word }}">
-  <br>
-
-  <button type="submit">Save updates</button>
-</form>
-
-
+<div class="bg">
+        <div class="container">
+            <div class="card">
+                <div class="card-header col-sm-12">
+                    <img class ="brain" src="../../assets/img/logo.png" alt="">
+                    mindFull
+                    <img class ="brain" src="../../assets/img/logo.png" alt="">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title">Edit Morningfull:</h3>
+                    <hr>
+                    <form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
+    
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-sm-6" for="morningfull-date"> MorningFull Date (required format)</label>
+                            <div class="col-sm-11">
+                                <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="morningfull-date" type="text" [(ngModel)]="entry.date" name="morningDate">
+                            </div>
+                        </div>
+                    </fieldset>        
+                    <fieldset>      
+                        <div class="form-group">
+                            <label class="col-sm-6">Grateful 1</label>
+                            <div class="col-sm-11">
+                                <textarea name="morningGrateful0" [(ngModel)]="entry.grateful[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>
+                                <textarea name="morningGrateful1" [(ngModel)]="entry.grateful[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
+                                <textarea name="morningGrateful2" [(ngModel)]="entry.grateful[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>      
+                        <div class="form-group">
+                            <label class="col-sm-6">Tasks</label>
+                            <div class="col-sm-11">
+                                <textarea name="morningTasks0" [(ngModel)]="entry.tasks[0]" autosize class="form-control" placeholder="Eat food " rows="1"></textarea>  
+                                <textarea name="morningTasks1" [(ngModel)]="entry.tasks[1]" autosize class="form-control" placeholder="Get Swole" rows="1"></textarea>
+                                <textarea name="morningTasks2" [(ngModel)]="entry.tasks[2]" autosize class="form-control" placeholder="Get to werq" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-sm-6"> MorningFull PhotoUrl </label>
+                            <div class="col-sm-11">
+                                <textarea name="morningPhotoUrl" [(ngModel)]="entry.photoUrl" autosize class="form-control" value="{{ entry.photoUrl }}" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="col-sm-6"> MorningFull Word </label>
+                            <div class="col-sm-11">
+                                <textarea name="morningWord" [(ngModel)]="entry.word" autosize class="form-control" value="{{ entry.word }}" rows="1"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="buttons">
+                        <p *ngIf="saveError" class="error"> {{ saveError }}</p>
+                        <button class="btn btn-success col-sm-6"> Save </button>
+                        <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Discard</button>
+                    </div>
+    
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    

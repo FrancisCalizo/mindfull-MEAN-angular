@@ -1,11 +1,7 @@
-<p>Update From</p>
+<!-- <p>Update From</p>
 <form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
 
-  <!--
-  <label for="eveningfull-accomplishments"> Accomplishments </label>
-  <input id="eveningfull-accomplishments" type="text"  [(ngModel)]="entry.accomplishments" name="eveningAccomplishments" value="{{ entry.accomplishments }}">
-  <br>
-  -->
+
 
   <fieldset>
       <div class="form-group">
@@ -33,11 +29,7 @@
   </fieldset>
   <br>
 
-  <!--
-  <label for="eveningfull-learn"> Learn </label>
-  <input id="eveningfull-learn" type="text"  [(ngModel)]="entry.learn" name="eveningLearn" value="{{ entry.learn }}">
-  <br>
-  -->
+
 
   <fieldset>
       <div class="form-group">
@@ -82,4 +74,93 @@
   <br>
 
   <button type="submit">Save updates</button>
-</form>
+</form> -->
+
+<!-- ======================================== --> 
+<div class="bg">
+    <div class="container">
+            <div class="card">
+                    <div class="card-header col-sm-12">
+                        <img class ="brain" src="../../assets/img/logo.png" alt="">
+                        mindFull
+                        <img class ="brain" src="../../assets/img/logo.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">My New Eveningfull:</h3>
+                        <hr>
+                        <form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
+                
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-sm-6" for="eveningfull-date"> EveningFull Date (required format)</label>
+                                <div class="col-sm-11">
+                                    <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="entry.date" name="eveningDate">
+                                </div>
+                            </div>
+                        </fieldset>        
+                        <fieldset>      
+                            <div class="form-group">
+                                <label class="col-sm-6">Accomplishments </label>
+                                <div class="col-sm-11">
+                                    <textarea name="eveningAccomplishments0" [(ngModel)]="entry.accomplishments[0]" autosize class="form-control" rows="1"></textarea>
+                                    <textarea name="eveningAccomplishments1" [(ngModel)]="entry.accomplishments[1]" autosize class="form-control" rows="1"></textarea>
+                                    <textarea name="eveningAccomplishments2" [(ngModel)]="entry.accomplishments[2]" autosize class="form-control" rows="1"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>      
+                            <div class="form-group">
+                                <label class="col-sm-6">What did i learn</label>
+                                <div class="col-sm-11">
+                                    <textarea name="eveningLearn0" [(ngModel)]="entry.learn[0]" autosize class="form-control"  rows="1"></textarea>  
+                                    <textarea name="eveningLearn1" [(ngModel)]="entry.learn[1]" autosize class="form-control" rows="1"></textarea>
+                                    <textarea name="eveningLearn2" [(ngModel)]="entry.learn[2]" autosize class="form-control" rows="1"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-sm-6"> Eveningfull Different  </label>
+                                <div class="col-sm-11">
+                                    <textarea name="eveningDifferent" [(ngModel)]="entry.different" autosize class="form-control" value="{{ entry.different }}" rows="1"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-sm-6"> MorningFull Word </label>
+                                <div class="col-sm-11">
+                                    <textarea name="eveningWord" [(ngModel)]="entry.word" autosize class="form-control" value="{{ entry.word }}" rows="1"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+    
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-sm-6"> Eveningfull Rating</label>
+                                <div class="col-sm-11">
+                                    <input type="number" class="form-control date" placeholder="5" [(ngModel)]="entry.rating" name="eveningRating" value="{{ entry.rating }}">
+                                </div>
+                            </div>
+                        </fieldset> 
+    
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-sm-6"> Picture Upload</label>
+                                <div class="col-sm-11">
+                                    <input type="file" class="form-control" name="image" [(ngModel)]="entry.image" ng2FileSelect [uploader]="myCoolUploader" value="{{ entry.image }}">
+                                </div>
+                            </div>
+                        </fieldset> 
+                        
+                        <div class="buttons">
+                            <p *ngIf="saveError" class="error"> {{ saveError }}</p>
+                            <button class="btn btn-success col-sm-6"> Save </button>
+                            <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Discard</button>
+                        </div>
+                        </form>
+                
+                    </div>
+            </div>
+        </div>
+    </div>

@@ -20,7 +20,6 @@ export class NewEveningfullComponent implements OnInit {
     eveningLearn           : [],
     eveningDifferent       : "",
     eveningRating          : null,
-    // eveningImage           : "",
     eveningWord            : ""
   }
 
@@ -61,21 +60,20 @@ export class NewEveningfullComponent implements OnInit {
 
   saveEveningfullNoImage(){
     this.myDashboardService.createNewEvening(this.eveningData)
-      .then( res => {
-        // This clear the new phone after saving
-        this.eveningData = { 
-          eveningDate            : "",
-          eveningAccomplishments : [],
-          eveningLearn           : [],
-          eveningDifferent       : "",
-          eveningRating          : null,
-          // eveningImage           : "",
-          eveningWord            : ""
-        }
-        this.saveError = '';
-        this.myRouter.navigate(['/dashboard'])
-  })
-  .catch( err => { this.saveError = "Something is wrong with saving"})
+    .then( res => {
+      // This clear the new phone after saving
+      this.eveningData = { 
+        eveningDate            : "",
+        eveningAccomplishments : [],
+        eveningLearn           : [],
+        eveningDifferent       : "",
+        eveningRating          : null,
+        eveningWord            : ""
+      }
+      this.saveError = '';
+      this.myRouter.navigate(['/dashboard'])
+    })
+    .catch( err => { this.saveError = "Something is wrong with saving"})
   }
 
   saveEveningfullWithImage(){

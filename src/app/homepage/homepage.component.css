@@ -235,7 +235,7 @@ header.masthead p {
   border: 1px solid white;
   border-radius: 300px;
   font-family: 'Open Sans', sans-serif; 
-  box-shadow: 5px 10px 18px #888888;
+  box-shadow: 5px 10px 10px #888888;
 }
 
 .btn-xl {
@@ -245,6 +245,11 @@ header.masthead p {
 
 .brain{
   height: 80px;
+}
+
+.description{
+  color: white;
+  text-shadow: 5px 5px 6px black;
 }
 
 

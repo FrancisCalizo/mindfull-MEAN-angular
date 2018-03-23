@@ -23,6 +23,15 @@ p{
 }
 
 /* Sidebar Area */
+.simple-text{
+  border: 1px solid black;
+  background-color: rgba(0,0,0, 0.9);
+  border-radius: 50%;
+  padding: 20px 5px;
+  color: black;
+  font-size: 20px;
+}
+
 
 /* .content{
   background-color: bisque;
@@ -80,10 +89,6 @@ p{
   font-weight: bold;
 }
 
-/* .router{
-  z-index: 6;
-} */
-
 .navbar{
   z-index: -1;
 }
@@ -96,4 +101,13 @@ p{
 
 .calendar{
   width:  20px;
+}
+
+.morning-view, .evening-view{
+  background-image: url('../../assets/img/wood.jpg')
+}
+
+strong{
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }

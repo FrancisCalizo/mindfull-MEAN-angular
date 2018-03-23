@@ -13,7 +13,7 @@
             
                     <fieldset>
                         <div class="form-group">
-                            <label class="col-sm-6" for="eveningfull-date"> EveningFull Date (required format)</label>
+                            <label class="col-sm-12 prompt-date" for="eveningfull-date"> Date</label>
                             <div class="col-sm-11">
                                 <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="eveningData.eveningDate" name="eveningDate">
                             </div>
@@ -21,44 +21,44 @@
                     </fieldset>        
                     <fieldset>      
                         <div class="form-group">
-                            <label class="col-sm-6">Accomplishments </label>
+                            <label class="col-sm-12 prompt">Today, I accomplished:  </label>
                             <div class="col-sm-11">
-                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>
-                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
-                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
+                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[0]" autosize class="form-control" placeholder="Deployed a functional MEAN Stack App" rows="1"></textarea>
+                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[1]" autosize class="form-control" placeholder="Helped a stranger in need" rows="1"></textarea>
+                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[2]" autosize class="form-control" placeholder="Didn't eat my bodyweight in donuts" rows="1"></textarea>
                             </div>
                         </div>
                     </fieldset>
                     <fieldset>      
                         <div class="form-group">
-                            <label class="col-sm-6">What did i learn</label>
+                            <label class="col-sm-12 prompt">Today, I learned :</label>
                             <div class="col-sm-11">
-                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[0]" autosize class="form-control" placeholder="Eat food " rows="1"></textarea>  
-                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[1]" autosize class="form-control" placeholder="Get Swole" rows="1"></textarea>
-                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[2]" autosize class="form-control" placeholder="Get to werq" rows="1"></textarea>
+                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[0]" autosize class="form-control" placeholder="App deployment is very tedious " rows="1"></textarea>  
+                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[1]" autosize class="form-control" placeholder="How Angular components work" rows="1"></textarea>
+                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[2]" autosize class="form-control" placeholder="Donuts aren't very healthy" rows="1"></textarea>
                             </div>
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="form-group">
-                            <label class="col-sm-6"> Eveningfull Different  </label>
+                            <label class="col-sm-12 prompt"> One thing I could have done differently is:  </label>
                             <div class="col-sm-11">
-                                <textarea name="eveningDifferent" [(ngModel)]="eveningData.eveningDifferent" autosize class="form-control" placeholder="Photo Url" rows="1"></textarea>
+                                <textarea name="eveningDifferent" [(ngModel)]="eveningData.eveningDifferent" autosize class="form-control" placeholder="Woke up earlier so I could exercise" rows="1"></textarea>
                             </div>
                         </div>
                     </fieldset>
                     <fieldset>
                         <div class="form-group">
-                            <label class="col-sm-6"> MorningFull Word </label>
+                            <label class="col-sm-12 prompt"> One word to describe by day today would be:  </label>
                             <div class="col-sm-11">
-                                <textarea name="eveningWord" [(ngModel)]="eveningData.eveningWord" autosize class="form-control" placeholder="evening Word" rows="1"></textarea>
+                                <textarea name="eveningWord" [(ngModel)]="eveningData.eveningWord" autosize class="form-control" placeholder="Relieved" rows="1"></textarea>
                             </div>
                         </div>
                     </fieldset>
 
                     <fieldset>
                         <div class="form-group">
-                            <label class="col-sm-6"> Eveningfull Rating</label>
+                            <label class="col-sm-12 prompt-date"> On a 1-5 scale, I would rate my day a :</label>
                             <div class="col-sm-11">
                                 <input type="number" class="form-control date" placeholder="5" [(ngModel)]="eveningData.eveningRating" name="eveningRating">
                             </div>
@@ -67,7 +67,7 @@
 
                     <fieldset>
                         <div class="form-group">
-                            <label class="col-sm-6"> Picture Upload</label>
+                            <label class="col-sm-12 prompt"> A picture upload from today: </label>
                             <div class="col-sm-11">
                                 <input type="file" class="form-control" name="image" ng2FileSelect [uploader]="myCoolUploader" >
                             </div>

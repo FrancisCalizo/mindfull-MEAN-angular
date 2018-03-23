@@ -14,7 +14,7 @@
                 
                         <fieldset>
                             <div class="form-group">
-                                <label class="col-sm-6" for="eveningfull-date"> EveningFull Date (required format)</label>
+                                <label class="col-sm-12 prompt-date" for="eveningfull-date"> Date</label>
                                 <div class="col-sm-11">
                                     <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="entry.date" name="eveningDate">
                                 </div>
@@ -22,7 +22,7 @@
                         </fieldset>        
                         <fieldset>      
                             <div class="form-group">
-                                <label class="col-sm-6">Accomplishments </label>
+                                <label class="col-sm-12 prompt">Today, I accomplished:  </label>
                                 <div class="col-sm-11">
                                     <textarea name="eveningAccomplishments0" [(ngModel)]="entry.accomplishments[0]" autosize class="form-control" rows="1"></textarea>
                                     <textarea name="eveningAccomplishments1" [(ngModel)]="entry.accomplishments[1]" autosize class="form-control" rows="1"></textarea>
@@ -32,7 +32,7 @@
                         </fieldset>
                         <fieldset>      
                             <div class="form-group">
-                                <label class="col-sm-6">What did i learn</label>
+                                <label class="col-sm-12 prompt">Today, I learned :</label>
                                 <div class="col-sm-11">
                                     <textarea name="eveningLearn0" [(ngModel)]="entry.learn[0]" autosize class="form-control"  rows="1"></textarea>  
                                     <textarea name="eveningLearn1" [(ngModel)]="entry.learn[1]" autosize class="form-control" rows="1"></textarea>
@@ -42,7 +42,7 @@
                         </fieldset>
                         <fieldset>
                             <div class="form-group">
-                                <label class="col-sm-6"> Eveningfull Different  </label>
+                                <label class="col-sm-12 prompt"> One thing I could have done differently is: </label>
                                 <div class="col-sm-11">
                                     <textarea name="eveningDifferent" [(ngModel)]="entry.different" autosize class="form-control" value="{{ entry.different }}" rows="1"></textarea>
                                 </div>
@@ -50,7 +50,7 @@
                         </fieldset>
                         <fieldset>
                             <div class="form-group">
-                                <label class="col-sm-6"> MorningFull Word </label>
+                                <label class="col-sm-12 prompt"> One word to describe by day today would be: </label>
                                 <div class="col-sm-11">
                                     <textarea name="eveningWord" [(ngModel)]="entry.word" autosize class="form-control" value="{{ entry.word }}" rows="1"></textarea>
                                 </div>
@@ -59,7 +59,7 @@
     
                         <fieldset>
                             <div class="form-group">
-                                <label class="col-sm-6"> Eveningfull Rating</label>
+                                <label class="col-sm-12 prompt-date"> On a 1-5 scale, I would rate my day a :</label>
                                 <div class="col-sm-11">
                                     <input type="number" class="form-control date" placeholder="5" [(ngModel)]="entry.rating" name="eveningRating" value="{{ entry.rating }}">
                                 </div>
@@ -77,7 +77,7 @@
 
                         <fieldset>
                                 <div class="form-group">
-                                    <label class="col-sm-6"> Eveningfull Image</label>
+                                    <label class="col-sm-12 prompt"> A picture upload from today: </label>
                                     <div class="col-sm-11">
                                         <input type="text" class="form-control "  [(ngModel)]="entry.image" name="eveningImage" value="{{ entry.image }}">
                                     </div>
@@ -91,7 +91,7 @@
                         <div class="buttons">
                             <p *ngIf="saveError" class="error"> {{ saveError }}</p>
                             <button class="btn btn-success col-sm-6"> Save </button>
-                            <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Back</button>
+                            <button [routerLink]="['/dashboard']"class="btn-primary btn col-sm-6">Back</button>
                         </div>
                         </form>
                 

@@ -1,6 +1,7 @@
 .bg{
   background-image: url('../../assets/img/coffee.jpg');
   background-size: cover;
+  background-position: center right;
   font-family: 'Open Sans', sans-serif
 }
 .card{
@@ -53,6 +54,19 @@ img{
   color: white;
   text-shadow: 3px 3px 6px black;
   text-align: center;
+}
+
+.prompt{
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.prompt-date{
+  font-family: 'Pacifico', cursive;
+}
+
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder{
+  color: rgba(0, 0, 0, 0.2)
 }
 
 

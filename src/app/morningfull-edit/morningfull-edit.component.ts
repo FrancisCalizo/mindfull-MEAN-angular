@@ -25,6 +25,7 @@ export class MorningfullEditComponent implements OnInit {
   updatedMorningTasks     : Array<String> = ['', '', ''];
   updatedMorningPhotoUrl  : String = '';
   updatedMorningWord      : String = '';
+  updatedMorningDate      : String = '';
   saveError: any;
 
   constructor(    
@@ -72,6 +73,7 @@ export class MorningfullEditComponent implements OnInit {
     this.updatedMorningTasks[2]      = formInfo.morningTasks2.value;
     this.updatedMorningPhotoUrl      = formInfo.morningPhotoUrl.value;
     this.updatedMorningWord          = formInfo.morningWord.value
+    this.updatedMorningDate          = formInfo.morningDate.value
     this.sendUpdatesToApi(id)
   }
   
@@ -80,7 +82,8 @@ export class MorningfullEditComponent implements OnInit {
         morningGrateful : this.updatedMorningGrateful,
         morningTasks     : this.updatedMorningTasks,
         morningPhotoUrl  : this.updatedMorningPhotoUrl,
-        morningWord      : this.updatedMorningWord
+        morningWord      : this.updatedMorningWord,
+        morningDate      : this.updatedMorningDate
       }
       this.myDashboardService.updateMorning(id, this.updatedMorning)
       .toPromise()

@@ -55,4 +55,16 @@ img{
   text-align: center;
 }
 
+.prompt{
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.prompt-date{
+  font-family: 'Pacifico', cursive;
+}
+
+textarea::-webkit-input-placeholder, input::-webkit-input-placeholder{
+  color: rgba(0, 0, 0, 0.2)
+}
 

@@ -15,7 +15,7 @@
       <!-- =======================Side Bar Begins Here ====================== -->
       <div class="wrapper">
 
-          <div class="sidebar" data-color="red">
+          <div class="sidebar" data-color="orange">
               <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
   
@@ -23,8 +23,8 @@
       -->
               <div class="logo">
                   <h3 class="simple-text">
-                        {{ currentUser.username }}'s <br>
-                         Dashboard 
+                        <strong>{{ currentUser.username }}'s <br>
+                         Dashboard </strong>
                   </h3>
               </div>
               <div class="sidebar-wrapper">
@@ -56,7 +56,7 @@
               <nav class="navbar navbar-transparent navbar-absolute">
                   <div class="container-fluid">
                       <!-- <div class="navbar-header"> -->
-                          <h2 class="top-title">mindFull </h2>
+                          <h2 class="top-title">be mindFull </h2>
                       <!-- </div> -->
               </div>
           </nav>
@@ -75,7 +75,9 @@
                            }" class="card text-center">
                             <!-- <a [routerLink]="['/dashboard/morningfull', entry._id]">  -->
                             <a class="router" [routerLink]="['/dashboard/editmorningfull', entry._id]">
-                              <div class="card-header morning-view" data-background-color="green">VIEW THIS MORNINGFULL </div>
+                              <div class="card-header morning-view" >
+                                   <img class="calendar" src="https://cdn3.iconfinder.com/data/icons/rcons-file-action/512/search_file-512.png" alt="">  <strong> View This Morningfull </strong> <img class="calendar" src="https://cdn3.iconfinder.com/data/icons/rcons-file-action/512/search_file-512.png" alt=""> 
+                                </div>
                             </a>
                               <div class="card-content">
                                   <h4 class="title one-word"> {{ entry.word }}</h4>                                  
@@ -95,14 +97,16 @@
                           'background-position': 'center'
                            }" class="card text-center">
                             <a [routerLink]="['/dashboard/editeveningfull', entry._id]">
-                              <div class="card-header" data-background-color="blue">VIEW THIS EVENINGFULL </div>
+                              <div class="card-header evening-view">
+                                    <img class="calendar" src="https://cdn3.iconfinder.com/data/icons/rcons-file-action/512/search_file-512.png" alt="">  <strong> View This Eveningfull </strong> <img class="calendar" src="https://cdn3.iconfinder.com/data/icons/rcons-file-action/512/search_file-512.png" alt=""> 
+                                </div>
                             </a>
                               <div class="card-content">
                                   <h4 class="title one-word"> {{ entry.word }}</h4>
                               </div>
                               <div class="card-footer">
                                   <div class="stats">
-                                      <span class="foot-date"><i class="material-icons calendar">date_range</i> {{ entry.date | date: "mediumDate" }} <i class="material-icons calendar">date_range</i></span>
+                                        <span class="foot-date"><img class="calendar" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png" alt=""> {{ entry.date | date: "mediumDate" }} <img class="calendar" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png" alt=""> </span>
                                   </div>
                               </div>
                           </div>

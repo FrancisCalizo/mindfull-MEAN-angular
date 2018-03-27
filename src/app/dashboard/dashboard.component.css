@@ -32,7 +32,6 @@ p{
   font-size: 20px;
 }
 
-
 /* .content{
   background-color: bisque;
 } */
@@ -48,6 +47,19 @@ p{
 
 .active a{
   border: 1px solid black;
+}
+
+@media (min-width: 991px) { 
+  .mobile-buttons{
+    display: none;
+  }
+}
+
+@media (max-width: 990px) { 
+  .top-title{
+    text-align: center;
+  }
+  
 }
 
 /* Entries Start Here */

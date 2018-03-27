@@ -66,7 +66,11 @@
           <div class="content">
               <div class="container-fluid">
                   <div class="row">
-
+                        <div class="mobile-buttons col-md-12">
+                            <h2 class="top-title">be mindFull</h2>
+                        </div>
+                  </div>
+                  <div class="row"> 
                       <div *ngFor="let entry of entries?.morningEntries" class="col-md-6">
                           <div [ngStyle]="{'background-image': 'url(' + entry.photoUrl + ')',
                           'box-shadow': 'inset 0 0 0 1000px rgba(255,255,255,.5)',

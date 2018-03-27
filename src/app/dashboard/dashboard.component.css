@@ -60,6 +60,13 @@ p{
     text-align: center;
   }
   
+  .btn-res{
+    margin: 10px auto;
+  }
+
+  .add-btn > a{
+    background-color: orange;
+  }
 }
 
 /* Entries Start Here */

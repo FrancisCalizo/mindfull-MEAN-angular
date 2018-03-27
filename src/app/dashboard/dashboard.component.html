@@ -66,8 +66,28 @@
           <div class="content">
               <div class="container-fluid">
                   <div class="row">
-                        <div class="mobile-buttons col-md-12">
+                        <div class="mobile-buttons col-sm-12">
                             <h2 class="top-title">be mindFull</h2>
+                            <ul class="nav">
+                                    <li class="active add-new btn-res col-md-6 offset-md-3 add-btn">
+                                        <a [routerLink]="['/dashboard/newmorningfull']">
+                                          <img class="icons" src="https://d30y9cdsu7xlg0.cloudfront.net/png/86105-200.png" alt="">
+                                          <p>Add New MorningFull</p>
+                                        </a>  
+                                    </li>
+                                    <li class="active add-new btn-res col-md-6 offset-md-3 add-btn">
+                                      <a [routerLink]="['/dashboard/neweveningfull']">
+                                          <img class="icons" src="https://cdn3.iconfinder.com/data/icons/glyph/227/Moon-512.png" alt="">
+                                          <p>Add New EveningFull</p>
+                                      </a>    
+                                    </li>
+                                    <li class="active logout-btn-li btn-res col-md-6 offset-md-3 add-btn">
+                                        <a class ="logout-btn" href="#" (click)="logMeOut()">
+                                          <img class="icons" src="https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/012_power-512.png" alt="">
+                                          <p class="logout">Log Out!</p>
+                                        </a>
+                                    </li>
+                                </ul>
                         </div>
                   </div>
                   <div class="row"> 

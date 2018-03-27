@@ -41,8 +41,6 @@ export class DashboardComponent implements OnInit {
     // this.getEntries();
   }
 
-
-
   getEntries() {
     this.myDashboardService.retrieveEntries()
     .subscribe(allEntries => {

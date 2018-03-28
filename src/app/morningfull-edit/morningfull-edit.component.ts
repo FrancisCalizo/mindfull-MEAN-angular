@@ -12,8 +12,7 @@ import { environment } from "../../environments/environment";
 })
 export class MorningfullEditComponent implements OnInit {
 
-  entry = <any>{
-    // Must define these in order for ngModel to work
+  entry = <any> {
     grateful : ['', '', ''],
     tasks    : ['', '', '']
   }

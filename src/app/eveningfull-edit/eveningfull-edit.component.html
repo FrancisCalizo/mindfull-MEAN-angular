@@ -65,16 +65,6 @@
                                 </div>
                             </div>
                         </fieldset> 
-    
-                        <!-- <fieldset>
-                            <div class="form-group">
-                                <label class="col-sm-6"> Picture Upload</label>
-                                <div class="col-sm-11">
-                                    <input type="file" class="form-control" name="eveningImage" [(ngModel)]="entry.image" ng2FileSelect [uploader]="myCoolUploader" value="{{ entry.image }}">
-                                </div>
-                            </div>
-                        </fieldset>  -->
-
                         <fieldset>
                                 <div class="form-group">
                                     <label class="col-sm-12 prompt"> A picture upload from today: </label>
@@ -83,19 +73,13 @@
                                     </div>
                                 </div>
                         </fieldset> 
-                        <!-- 
-                        <label for="eveningfull-image"> image </label>
-                        <input id="eveningfull-image" type="text"  [(ngModel)]="entry.image" name="eveningImage" value="{{ entry.image }}">
-                        <br> -->
-                        
                         <div class="buttons">
                             <p *ngIf="saveError" class="error"> {{ saveError }}</p>
                             <button class="btn btn-success col-sm-6"> Save </button>
                             <button [routerLink]="['/dashboard']"class="btn-primary btn col-sm-6">Back</button>
                         </div>
-                        </form>
-                
-                    </div>
+                    </form>                
             </div>
         </div>
     </div>
+</div>

@@ -1,73 +1,71 @@
 <div class="bg">
-        <div class="container">
-            <div class="card">
-                <div class="card-header col-sm-12">
-                    <img class ="brain" src="../../assets/img/logo.png" alt="">
-                    mindFull
-                    <img class ="brain" src="../../assets/img/logo.png" alt="">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">Edit Morningfull of {{ entry.date | date: "mediumDate" }}</h3>
-                    <button class="btn-danger btn deleteEntry" (click)="deleteThisMorning()">Delete</button>
-                    <hr>
-                    <form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
-    
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="col-sm-6 prompt-date" for="morningfull-date">Date </label>
-                            <div class="col-sm-11">
-                                <input data-date="" data-date-format="DD MMMM YYYY" id="morningfull-date" class="form-control date" placeholder="Date" type="text" [(ngModel)]="entry.date" name="morningDate">
-                            </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-header col-sm-12">
+                <img class ="brain" src="../../assets/img/logo.png" alt="">
+                mindFull
+                <img class ="brain" src="../../assets/img/logo.png" alt="">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">Edit Morningfull of {{ entry.date | date: "mediumDate" }}</h3>
+                <button class="btn-danger btn deleteEntry" (click)="deleteThisMorning()">Delete</button>
+                <hr>
+                <form (ngSubmit)="doTheUpdate(entry._id, myForm)" #myForm="ngForm" >
+
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-6 prompt-date" for="morningfull-date">Date </label>
+                        <div class="col-sm-11">
+                            <input data-date="" data-date-format="DD MMMM YYYY" id="morningfull-date" class="form-control date" placeholder="Date" type="text" [(ngModel)]="entry.date" name="morningDate">
                         </div>
-                    </fieldset>        
-                    <fieldset>      
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt">Today, I am grateful for: </label>
-                            <div class="col-sm-11">
-                                <textarea name="morningGrateful0" [(ngModel)]="entry.grateful[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>
-                                <textarea name="morningGrateful1" [(ngModel)]="entry.grateful[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
-                                <textarea name="morningGrateful2" [(ngModel)]="entry.grateful[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>      
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt">Today, I will accomplish these tasks:</label>
-                            <div class="col-sm-11">
-                                <textarea name="morningTasks0" [(ngModel)]="entry.tasks[0]" autosize class="form-control" placeholder="Eat food " rows="1"></textarea>  
-                                <textarea name="morningTasks1" [(ngModel)]="entry.tasks[1]" autosize class="form-control" placeholder="Get Swole" rows="1"></textarea>
-                                <textarea name="morningTasks2" [(ngModel)]="entry.tasks[2]" autosize class="form-control" placeholder="eat moar food and get moar swole" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt">This photo URL will represent something about my upcoming day:  </label>
-                            <div class="col-sm-11">
-                                <textarea name="morningPhotoUrl" [(ngModel)]="entry.photoUrl" autosize class="form-control" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt"> One Word to represent something about my upcoming day: </label>
-                            <div class="col-sm-11">
-                                <textarea name="morningWord" [(ngModel)]="entry.word" autosize class="form-control" value="{{ entry.word }}" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    
-                    <div class="buttons">
-                        <p *ngIf="saveError" class="error"> {{ saveError }}</p>
-                        <button class="btn btn-success col-sm-6"> Save </button>
-                        <button [routerLink]="['/dashboard']"class="btn-primary btn col-sm-6">Back</button>
                     </div>
-    
-                    </form>
-                </div>
+                </fieldset>        
+                <fieldset>      
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt">Today, I am grateful for: </label>
+                        <div class="col-sm-11">
+                            <textarea name="morningGrateful0" [(ngModel)]="entry.grateful[0]" autosize class="form-control" placeholder="My good health and energy " rows="1"></textarea>
+                            <textarea name="morningGrateful1" [(ngModel)]="entry.grateful[1]" autosize class="form-control" placeholder="My supportive friendships" rows="1"></textarea>
+                            <textarea name="morningGrateful2" [(ngModel)]="entry.grateful[2]" autosize class="form-control" placeholder="Loving what I do every day" rows="1"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>      
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt">Today, I will accomplish these tasks:</label>
+                        <div class="col-sm-11">
+                            <textarea name="morningTasks0" [(ngModel)]="entry.tasks[0]" autosize class="form-control" placeholder="Eat food " rows="1"></textarea>  
+                            <textarea name="morningTasks1" [(ngModel)]="entry.tasks[1]" autosize class="form-control" placeholder="Get Swole" rows="1"></textarea>
+                            <textarea name="morningTasks2" [(ngModel)]="entry.tasks[2]" autosize class="form-control" placeholder="eat moar food and get moar swole" rows="1"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt">This photo URL will represent something about my upcoming day:  </label>
+                        <div class="col-sm-11">
+                            <textarea name="morningPhotoUrl" [(ngModel)]="entry.photoUrl" autosize class="form-control" rows="1"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt"> One Word to represent something about my upcoming day: </label>
+                        <div class="col-sm-11">
+                            <textarea name="morningWord" [(ngModel)]="entry.word" autosize class="form-control" value="{{ entry.word }}" rows="1"></textarea>
+                        </div>
+                    </div>
+                </fieldset>                    
+                <div class="buttons">
+                    <p *ngIf="saveError" class="error"> {{ saveError }}</p>
+                    <button class="btn btn-success col-sm-6"> Save </button>
+                    <button [routerLink]="['/dashboard']"class="btn-primary btn col-sm-6">Back</button>
+                </div>    
+                </form>
             </div>
         </div>
     </div>
+</div>
     
     
     

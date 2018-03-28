@@ -1,87 +1,83 @@
 <div class="bg">
     <div class="container">
         <div class="card">
-                <div class="card-header col-sm-12">
-                    <img class ="brain" src="../../assets/img/logo.png" alt="">
-                    mindFull
-                    <img class ="brain" src="../../assets/img/logo.png" alt="">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title">My New Eveningfull:</h3>
-                    <hr>
-                    <form (ngSubmit)="saveEveningfull()">
-            
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt-date" for="eveningfull-date"> Date</label>
-                            <div class="col-sm-11">
-                                <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="eveningData.eveningDate" name="eveningDate">
-                            </div>
+            <div class="card-header col-sm-12">
+                <img class ="brain" src="../../assets/img/logo.png" alt="">
+                mindFull
+                <img class ="brain" src="../../assets/img/logo.png" alt="">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">My New Eveningfull:</h3>
+                <hr>
+                <form (ngSubmit)="saveEveningfull()">
+        
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt-date" for="eveningfull-date"> Date</label>
+                        <div class="col-sm-11">
+                            <input data-date="" data-date-format="DD MMMM YYYY" class="form-control date" id="eveningfull-date" type="text" placeholder="Date" [(ngModel)]="eveningData.eveningDate" name="eveningDate">
                         </div>
-                    </fieldset>        
-                    <fieldset>      
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt">Today, I accomplished:  </label>
-                            <div class="col-sm-11">
-                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[0]" autosize class="form-control" placeholder="Deployed a functional MEAN Stack App" rows="1"></textarea>
-                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[1]" autosize class="form-control" placeholder="Helped a stranger in need" rows="1"></textarea>
-                                <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[2]" autosize class="form-control" placeholder="Didn't eat my bodyweight in donuts" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>      
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt">Today, I learned :</label>
-                            <div class="col-sm-11">
-                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[0]" autosize class="form-control" placeholder="App deployment is very tedious " rows="1"></textarea>  
-                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[1]" autosize class="form-control" placeholder="How Angular components work" rows="1"></textarea>
-                                <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[2]" autosize class="form-control" placeholder="Donuts aren't very healthy" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt"> One thing I could have done differently is:  </label>
-                            <div class="col-sm-11">
-                                <textarea name="eveningDifferent" [(ngModel)]="eveningData.eveningDifferent" autosize class="form-control" placeholder="Woke up earlier so I could exercise" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt"> One word to describe by day today would be:  </label>
-                            <div class="col-sm-11">
-                                <textarea name="eveningWord" [(ngModel)]="eveningData.eveningWord" autosize class="form-control" placeholder="Relieved" rows="1"></textarea>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt-date"> On a 1-5 scale, I would rate my day a :</label>
-                            <div class="col-sm-11">
-                                <input type="number" class="form-control date" placeholder="5" [(ngModel)]="eveningData.eveningRating" name="eveningRating">
-                            </div>
-                        </div>
-                    </fieldset> 
-
-                    <fieldset>
-                        <div class="form-group">
-                            <label class="col-sm-12 prompt"> A picture upload from today: </label>
-                            <div class="col-sm-11">
-                                <input type="file" class="form-control" name="image" ng2FileSelect [uploader]="myCoolUploader" >
-                            </div>
-                        </div>
-                    </fieldset> 
-                    
-                    <div class="buttons">
-                        <p *ngIf="saveError" class="error"> {{ saveError }}</p>
-                        <button class="btn btn-success col-sm-6"> Save </button>
-                        <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Discard</button>
                     </div>
-                    </form>
-            
+                </fieldset>        
+                <fieldset>      
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt">Today, I accomplished:  </label>
+                        <div class="col-sm-11">
+                            <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[0]" autosize class="form-control" placeholder="Deployed a functional MEAN Stack App" rows="1"></textarea>
+                            <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[1]" autosize class="form-control" placeholder="Helped a stranger in need" rows="1"></textarea>
+                            <textarea name="eveningAccomplishments" [(ngModel)]="eveningData.eveningAccomplishments[2]" autosize class="form-control" placeholder="Didn't eat my bodyweight in donuts" rows="1"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>      
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt">Today, I learned :</label>
+                        <div class="col-sm-11">
+                            <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[0]" autosize class="form-control" placeholder="App deployment is very tedious " rows="1"></textarea>  
+                            <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[1]" autosize class="form-control" placeholder="How Angular components work" rows="1"></textarea>
+                            <textarea name="eveningLearn" [(ngModel)]="eveningData.eveningLearn[2]" autosize class="form-control" placeholder="Donuts aren't very healthy" rows="1"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt"> One thing I could have done differently is:  </label>
+                        <div class="col-sm-11">
+                            <textarea name="eveningDifferent" [(ngModel)]="eveningData.eveningDifferent" autosize class="form-control" placeholder="Woke up earlier so I could exercise" rows="1"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt"> One word to describe by day today would be:  </label>
+                        <div class="col-sm-11">
+                            <textarea name="eveningWord" [(ngModel)]="eveningData.eveningWord" autosize class="form-control" placeholder="Relieved" rows="1"></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt-date"> On a 1-5 scale, I would rate my day a :</label>
+                        <div class="col-sm-11">
+                            <input type="number" class="form-control date" placeholder="5" [(ngModel)]="eveningData.eveningRating" name="eveningRating">
+                        </div>
+                    </div>
+                </fieldset> 
+                <fieldset>
+                    <div class="form-group">
+                        <label class="col-sm-12 prompt"> A picture upload from today: </label>
+                        <div class="col-sm-11">
+                            <input type="file" class="form-control" name="image" ng2FileSelect [uploader]="myCoolUploader" >
+                        </div>
+                    </div>
+                </fieldset>                     
+                <div class="buttons">
+                    <p *ngIf="saveError" class="error"> {{ saveError }}</p>
+                    <button class="btn btn-success col-sm-6"> Save </button>
+                    <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Discard</button>
                 </div>
+                </form>            
+            </div>
         </div>
     </div>
 </div>

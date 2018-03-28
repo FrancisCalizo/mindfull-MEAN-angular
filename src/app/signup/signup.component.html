@@ -1,21 +1,17 @@
 <div id="overlay" class="daBody">
     <div class="loginbox">
         <div class="clearer"></div>
-  
         <h1>Create Account</h1><br>
         <p *ngIf="throwError" class="error">
             {{ throwError }}
         </p>
         <form (ngSubmit)="doSignUp()">
-
             <label for="username-input"></label>
             <input id="username-input" type="text" placeholder="Username" [(ngModel)]="signupInfo.username" name="usernameValue">
-            <br>
-          
+            <br>          
             <label for="password-input"></label>
             <input id="password-input" type="password" placeholder="Password" [(ngModel)]="signupInfo.password" name="passwordValue">
-            <br>
-          
+            <br>          
             <input type="submit" value="CREATE ACCOUNT">
           </form>
           <div class="no-account">

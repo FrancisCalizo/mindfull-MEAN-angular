@@ -10,7 +10,6 @@
                 <h3 class="card-title">My new Morningfull:</h3>
                 <hr>
                 <form (ngSubmit)="saveMorningfull()">
-
                 <fieldset>
                     <div class="form-group">
                         <label class="col-sm-12 prompt-date" for="morningfull-date"> Date</label>
@@ -54,14 +53,12 @@
                             <textarea name="morningWord" [(ngModel)]="morningData.morningWord" autosize class="form-control" placeholder="Productive" rows="1"></textarea>
                         </div>
                     </div>
-                </fieldset>
-                
+                </fieldset>                
                 <div class="buttons">
                     <p *ngIf="saveError" class="error"> {{ saveError }}</p>
                     <button class="btn btn-success col-sm-6"> Save </button>
                     <button [routerLink]="['/dashboard']"class="btn-danger btn col-sm-6">Discard</button>
                 </div>
-
                 </form>
             </div>
         </div>

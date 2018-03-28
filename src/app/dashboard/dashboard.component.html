@@ -16,11 +16,7 @@
       <div class="wrapper">
 
           <div class="sidebar" data-color="orange">
-              <!--
-          Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
-  
-          Tip 2: you can also add an image using data-image tag
-      -->
+              
               <div class="logo">
                   <h3 class="simple-text">
                         <strong>{{ currentUser.username }}'s <br>
@@ -97,7 +93,6 @@
                           'background-size': 'cover',
                           'background-position': 'center'
                            }" class="card text-center">
-                            <!-- <a [routerLink]="['/dashboard/morningfull', entry._id]">  -->
                             <a class="router" [routerLink]="['/dashboard/editmorningfull', entry._id]">
                               <div class="card-header morning-view" >
                                    <img class="calendar" src="https://cdn3.iconfinder.com/data/icons/rcons-file-action/512/search_file-512.png" alt="">  <strong> View This Morningfull </strong> <img class="calendar" src="https://cdn3.iconfinder.com/data/icons/rcons-file-action/512/search_file-512.png" alt=""> 

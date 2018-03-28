@@ -2,7 +2,7 @@
 <p align="center">
 <strong>Demo the App here: http://bemindfull.co </strong>
 
-<strong>Client-side repository can be found here: https://github.com/FrancisCalizo/mindfull-MEAN-angular </strong>
+<strong>Client-side repository can be found here: https://github.com/FrancisCalizo/mindfull-MEAN-server </strong>
 
 Module 3 <strong>MEAN Stack Application</strong> for Ironhack's 9 week coding bootcamp, created in 14 days.
 

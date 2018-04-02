@@ -1,7 +1,6 @@
 <h1 align="center"> mindFull </h1>
 <p align="center">
 <strong>Demo the App here: http://bemindfull.co </strong>
-<<<<<<< HEAD
 <strong>Server-side repository can be found here: https://github.com/FrancisCalizo/mindfull-MEAN-server </strong>
 
 Module 3 <strong>MEAN Stack Application</strong> for Ironhack's 9 week coding bootcamp, created in 14 days.
@@ -12,7 +11,7 @@ mindFull is a journal-entry based application in which a user is able to complet
 <h1 align="center">Technologies</h1>
 <p>Angular 2, Node.js, Express.js, MongoDB, Mongoose, Passport, Bcrypt, Heroku, JavaScript, Bootstrap, HTML, CSS</p>
 
-=======
+
 
 <strong>Client-side repository can be found here: https://github.com/FrancisCalizo/mindfull-MEAN-server </strong>
 
@@ -24,14 +23,11 @@ mindFull is a journal-entry based application in which a user is able to complet
 <h1 align="center">Technologies</h1>
 <p>Angular 2, Node.js, Express.js, MongoDB, Mongoose, Passport, Bcrypt, Heroku, JavaScript, Bootstrap, HTML, CSS</p>
 
->>>>>>> 53aa4f1369d48c6ad04c831f92ca7dfe2b7571ee
 <h1> Future Implementation</h1>
 <ul>
   <li> Have morning and evening entries of a similar date appear on the same line 
   <li> Implement pagination that will result in 7 days worth of entries per page (14 total entries)
   <li> Incorporate Angular filter pipe in order to sort through entries on a given page  
-<<<<<<< HEAD
 </ul>
 =======
 </ul>
->>>>>>> 53aa4f1369d48c6ad04c831f92ca7dfe2b7571ee

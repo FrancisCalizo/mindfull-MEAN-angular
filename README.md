@@ -1,6 +1,6 @@
 <h1 align="center"> mindFull </h1>
 <p align="center">
-<strong>Demo the App here: http://bemindfull.co </strong>
+<strong>Demo the App here: http://bemindfull.co </strong> <br>
 <strong>Server-side repository can be found here: https://github.com/FrancisCalizo/mindfull-MEAN-server </strong>
 
 Module 3 <strong>MEAN Stack Application</strong> for Ironhack's 9 week coding bootcamp, created in 14 days.
@@ -29,5 +29,4 @@ mindFull is a journal-entry based application in which a user is able to complet
   <li> Implement pagination that will result in 7 days worth of entries per page (14 total entries)
   <li> Incorporate Angular filter pipe in order to sort through entries on a given page  
 </ul>
-=======
-</ul>
+

@@ -247,6 +247,12 @@ header.masthead p {
   height: 80px;
 }
 
+@media (max-width: 450px) {
+  .brain{
+    height: 50px;
+  }
+}
+
 .description{
   color: white;
   text-shadow: 5px 5px 6px black;
